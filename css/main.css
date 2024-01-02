@@ -1,3 +1,15 @@
+a {
+    color: white !important;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+
+li{
+    list-style: none;
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -26,14 +38,6 @@ body {
 #home nav li {
     margin-top: 6%;
     padding: 4%;
-    list-style: none;
-}
-#home nav a {
-    color: white;
-}
-
-#home nav a:hover {
-text-decoration: none;
 }
 
 .nav-sides{
@@ -42,3 +46,13 @@ text-decoration: none;
     margin-right: 4%;
     font-weight: 700;
 }
+
+.move-down{
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    text-align: center; 
+    padding-bottom: 20px;
+}
+
