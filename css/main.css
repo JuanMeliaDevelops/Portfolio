@@ -1,0 +1,44 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+#home {
+    color: white;
+    text-align: center;
+    height: 100vh;
+    background-image: url("../imgs/Background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#home nav{
+    width: 100%;
+    padding-top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home nav ul  {
+    width: 20vw;
+    display: flex;
+}
+
+#home nav li {
+    margin-top: 6%;
+    padding: 4%;
+    list-style: none;
+}
+#home nav a {
+    color: white;
+}
+
+#home nav a:hover {
+text-decoration: none;
+}
+
+.nav-sides{
+    font-size: larger;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-weight: 700;
+}
