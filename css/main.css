@@ -139,17 +139,23 @@ background-color: rgba(255, 255, 255, 0.2);
 transition: background-color 0.8s ease;
 }
 
-.home-btn:hover img,
-.home-btn:hover p{
-  transform: scale(1.1);
+.home-btn:hover img {
+  transform: scale(1.2);
   transition: transform 0.8s ease;
   
   }
 
+  
+.home-btn:hover p {
+  transform: scale(0.9);
+  transition: transform 0.8s ease;
+  
+  }
 
   /* Section BIO */
 
   #bio{
     width: 100%;
     height: 100vh;
+    background-color: #262320;
   }
