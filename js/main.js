@@ -1,8 +1,8 @@
 
 /* Dropdown home lang  */
 
-var dropdown = document.getElementById("lang-dropdown");
-var menuDropdown =  document.getElementById("lang-dropdown-menu");
+const dropdown = document.getElementById("lang-dropdown");
+const menuDropdown =  document.getElementById("lang-dropdown-menu");
 
 document.addEventListener('click', function(event) {
 if (dropdown.contains(event.target)){
@@ -15,3 +15,15 @@ else {
 }
 );
 
+
+/* Scroll Down a trabajos  Animacion */
+
+const scrollDown = document.getElementById("scroll-down");
+
+scrollDown.addEventListener('mouseenter', function(event){
+        scrollDown.classList.add("animate__animated", "animate__bounce");
+    } );
+
+    scrollDown.addEventListener('mouseleave', function(event) {
+        scrollDown.classList.remove("animate__animated", "animate__bounce");
+    });
