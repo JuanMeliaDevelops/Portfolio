@@ -9,12 +9,6 @@ align-items: center;
 cursor: pointer;
 }
 
-.dropdown:hover{
-    transform: scale(1.1);
-    transition: transform 0.8s ease;
-}
-
-
 .dropdown-menu{
 min-width: 2px !important;
 left: auto !important;
