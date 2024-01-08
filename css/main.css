@@ -1,5 +1,5 @@
 html{
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 a {
@@ -51,12 +51,11 @@ margin-top: 6%;
 padding: 4%;
 width: 6vw;
 }
-  
-.home-nav li a:Hover{
 
+.home-nav li a:Hover{
 opacity: 0.4;
 transition: opacity  0.8s ease;
-  }
+}
 
 
 .nav-sides{
@@ -71,16 +70,24 @@ transform: scale(1.1);
 transition: transform 0.8s ease;
 }
 
+.home-pattern{
+position: absolute;
+bottom: 120;
+left: 0;
+right: 0;
+margin: 0 auto; /* Centrar horizontalmente */
+text-align: center; 
+}
 #scroll-down{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto; /* Centrar horizontalmente */
-  text-align: center; 
-  padding-bottom: 20px;
-  width: 20vw;
-  height: 10vh;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: 0 auto; /* Centrar horizontalmente */
+text-align: center; 
+padding-bottom: 20px;
+width: 20vw;
+height: 10vh;
 }
 
 
@@ -91,6 +98,11 @@ display: flex;
 align-items: center;
 justify-content: space-evenly;
 
+}
+
+.avatar{
+width: 15vw;
+height: 40vh;
 }
 
 .home-info{
@@ -118,7 +130,7 @@ justify-content: space-evenly;
 .home-socials a:hover{
 opacity: 0.4;
 transition: opacity 0.8s ease;
-  }
+}
 
 .home-btn{
 text-align: center;
@@ -140,22 +152,74 @@ transition: background-color 0.8s ease;
 }
 
 .home-btn:hover img {
-  transform: scale(1.2);
-  transition: transform 0.8s ease;
-  
-  }
+transform: scale(1.2);
+transition: transform 0.8s ease;
 
-  
+}
+
+
 .home-btn:hover p {
-  transform: scale(0.9);
-  transition: transform 0.8s ease;
-  
-  }
+transform: scale(0.9);
+transition: transform 0.8s ease;
 
-  /* Section BIO */
+}
 
-  #bio{
-    width: 100%;
-    height: 100vh;
-    background-color: #262320;
+/* Section Trabajos */
+
+#work{
+width: 100%;
+background-color: #262320;
+color: white;
+
+}
+
+#work ul{
+display: flex;
+width: 40vw;
+margin: 0 auto;
+padding-top: 10vh;
+justify-content: space-around;
+
+}
+
+#work ul li{
+padding: 2%;
+font-weight: 600;
+cursor: pointer;
+text-align: center;
+}
+
+
+#work ul li:hover{
+opacity: 0.4;
+transition: opacity  0.8s ease;
+}
+
+.work-container{
+margin-top: 4%;
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+
+}
+
+.work-cards{
+margin: 4%;
+margin-bottom: 10% ;
+}
+
+.work-cards div{
+width: 40vw;
+height: 50vh;
+background-size: cover;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.work-cards:hover  div {
+  opacity: 0.6;
+  transition: opacity  0.8s ease;
   }
