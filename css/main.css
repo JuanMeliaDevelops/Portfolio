@@ -70,14 +70,6 @@ transform: scale(1.1);
 transition: transform 0.8s ease;
 }
 
-.home-pattern{
-position: absolute;
-bottom: 120;
-left: 0;
-right: 0;
-margin: 0 auto; /* Centrar horizontalmente */
-text-align: center; 
-}
 #scroll-down{
 position: absolute;
 bottom: 0;
@@ -213,13 +205,25 @@ margin-bottom: 10% ;
 width: 40vw;
 height: 50vh;
 background-size: cover;
+background-position: center;
 border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;
 border-top-right-radius: 20px;
 border-bottom-right-radius: 20px;
+text-align: left;
 }
 
 .work-cards:hover  div {
-  opacity: 0.6;
-  transition: opacity  0.8s ease;
-  }
+opacity: 0.6;
+transition: opacity  0.8s ease;
+}
+
+.work-cards h6{
+  padding: 2%;
+  font-size: 1.4rem;
+}
+
+.work-cards p{
+padding-left: 2%;
+
+}
