@@ -33,43 +33,51 @@ scrollDown.classList.remove("animate__animated", "animate__bounce");
 
 
 
-/* Mostrar Categorias Work-cards */
 
+// Mostrar Categorias Work-cards
 document.addEventListener('DOMContentLoaded', function () {
-const categories = document.querySelectorAll('.work-categories li');
-const workCards = document.querySelectorAll('.work-container .work-cards');
+    const categories = document.querySelectorAll('.work-categories li');
+    const workCards = document.querySelectorAll('.work-container .work-cards');
 
-// Función para mostrar work-cards de la categoría seleccionada
-function showSelectedCategory(selectedCategory) {
-workCards.forEach(function (card) {
-const cardCategories = card.getAttribute('data-category').split(' ');
-card.style.display = cardCategories.includes(selectedCategory) ? 'block' : 'none';
-});
-}
+    // Función para mostrar work-cards de la categoría seleccionada
+    function showSelectedCategory(selectedCategory) {
+        workCards.forEach(function (card) {
+            const cardCategories = card.getAttribute('data-category').split(' ');
 
-// Mostrar las work-cards destacadas al cargar la página
-showSelectedCategory('destacados');
+            if (!cardCategories.includes(selectedCategory)) {
+                card.classList.remove('animate__bounceIn');
+                card.classList.add('animate__bounceOut');
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 1200);
 
-// Escuchar clics en las categorías
-categories.forEach(function (category) {
-category.addEventListener('click', function () {
+            } else {
+                card.classList.remove('animate__bounceOut');
+                card.style.display = 'block';
+                card.classList.add('animate__bounceIn');
+            }
+        });
+    }
 
-    // Elimina clase a todos los li categories
-categories.forEach(li => {
-    li.classList.remove('selected-category');
+
+    // Mostrar las work-cards destacadas al cargar la página
+    showSelectedCategory('destacados');
+
+    // Escuchar clics en las categorías
+    categories.forEach(function (category) {
+        category.addEventListener('click', function () {
+            // Elimina clase a todos los li categories
+            categories.forEach(li => {
+                li.classList.remove('selected-category');
+            });
+
+            // Agregar la clase 'selected' solo al elemento clickeado
+            this.classList.add('selected-category');
+
+            const selectedCategory = this.getAttribute('data-category');
+
+            // Mostrar solo las work-cards correspondientes a la categoría seleccionada
+            showSelectedCategory(selectedCategory);
+        });
     });
-    // Agregar la clase 'selected' solo al elemento clickeado
-    this.classList.add('selected-category');
-    
-const selectedCategory = this.getAttribute('data-category');
-
-// Ocultar todas las work-cards
-workCards.forEach(function (card) {
-    card.style.display = 'none';
-});
-
-// Mostrar solo las work-cards correspondientes a la categoría seleccionada
-showSelectedCategory(selectedCategory);
-});
-});
 });

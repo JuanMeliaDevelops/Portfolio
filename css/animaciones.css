@@ -60,6 +60,6 @@ background-color: transparent;
 /* Categorias Work-Cards */ 
 
 .selected-category{
-  font-weight: bold;
+  font-weight: 900;
   text-decoration: underline;
 }
