@@ -42,22 +42,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Función para mostrar work-cards de la categoría seleccionada
     function showSelectedCategory(selectedCategory) {
         workCards.forEach(function (card) {
-            const cardCategories = card.getAttribute('data-category').split(' ');
-
-            if (!cardCategories.includes(selectedCategory)) {
-                card.classList.remove('animate__bounceIn');
-                card.classList.add('animate__bounceOut');
-                setTimeout(() => {
-                    card.style.display = 'none';
-                }, 1200);
-
-            } else {
-                card.classList.remove('animate__bounceOut');
-                card.style.display = 'block';
-                card.classList.add('animate__bounceIn');
-            }
+          const cardCategories = card.getAttribute('data-category').split(' ');
+      
+          if (cardCategories.includes(selectedCategory)) {
+            card.classList.add('animate__bounceIn');
+            card.style.display = 'block';
+            
+          } else {
+            card.style.display = 'none';
+            card.classList.remove('animate__bounceIn');
+          }
         });
-    }
+      }
+      
 
 
     // Mostrar las work-cards destacadas al cargar la página

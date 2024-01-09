@@ -63,3 +63,24 @@ background-color: transparent;
   font-weight: 900;
   text-decoration: underline;
 }
+
+
+.animate__animated.animate__bounceIn {
+  --animate-duration: 1.2s;
+}
+
+.work-cards {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.work-cards.animate__bounceIn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work-cards.animate__bounceOut {
+  opacity: 0;
+  visibility: hidden;
+}
