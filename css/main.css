@@ -3,7 +3,7 @@ scroll-behavior: smooth;
 }
 
 a {
-color: white !important;
+color: whitesmoke !important;
 }
 
 a:hover{
@@ -22,12 +22,15 @@ font-family: 'Inter', sans-serif;
 /* Section Home */
 
 #home {
-color: white;
+color: whitesmoke;
 text-align: center;
 height: 100vh;
 background-image: url("../imgs/Background.jpg");
 background-size: cover;
 background-position-y: 60%;
+margin: 0;
+padding: 0;
+
 }
 #home nav{
 width: 100%;
@@ -129,9 +132,9 @@ text-align: center;
 width: 40%;
 height: 8%;
 font-weight: bold;
-color: white;
+color: whitesmoke;
 background-color: transparent;
-border: 2px white solid;
+border: 2px whitesmoke solid;
 border-radius: 20px;
 }
 
@@ -158,17 +161,18 @@ transition: transform 0.8s ease;
 #work{
 width: 100%;
 background-color: #262320;
-color: white;
+color: whitesmoke;
+margin: 0;
+padding: 0;
 
 }
 
 #work ul{
 display: flex;
 width: 40vw;
-margin: 0 auto;
 padding-top: 10vh;
 justify-content: space-between;
-
+margin: 0 auto;
 }
 
 #work ul li{
@@ -176,7 +180,6 @@ padding: 2%;
 font-weight: 600;
 font-size: 1.2rem;
 cursor: pointer;
-text-align: center;
 }
 
 
@@ -186,7 +189,8 @@ transition: opacity  0.8s ease;
 }
 
 .work-container{
-margin-top: 4%;
+padding-top: 4%;
+padding-bottom: 4%;
 width: 100%;
 display: flex;
 flex-wrap: wrap;
@@ -195,7 +199,7 @@ justify-content: space-around;
 }
 /* Estilos CSS para las tarjetas de trabajo */
 .work-cards {
-  margin: 4%;
+  margin: 2%;
 }
 
 .work-cards div {
@@ -230,8 +234,7 @@ justify-content: space-around;
 }
 
 .work-cards:hover div {
-  opacity: 0.4; 
-  transition: opacity 0.8s ease; 
+  backdrop-filter: brightness(60%);
 }
 
 .work-cards:hover .work-cards-content {
@@ -243,11 +246,50 @@ justify-content: space-around;
   margin: 4%;
   width: 10vw;
   height: 5vh;
-  color: white;
+  color: whitesmoke;
   font-weight: 600;
   font-size: 1.1rem;
   background-color: black;
   border: 2px solid black;
   border-radius: 20px;
   opacity: 1;
+}
+
+
+
+/* Section Contacto */
+
+#contact{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0A0C0A;
+  text-align: center;
+  color: whitesmoke;
+  padding-top: 4% ;
+}
+
+
+
+
+
+/* Footer */
+
+footer{
+  width: 100%;
+  height: 10vh;
+  background-image: url("../imgs/Background.jpg");
+  background-size: cover;
+  background-position-y: 80%;
+
+  color: whitesmoke;
+  text-align: center;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div{
+  width: 20vw;
 }
