@@ -276,10 +276,60 @@ width: 40vw;
   width: 100%;
   height: 100vh;
   background-color: #0A0C0A;
-  text-align: center;
   color: whitesmoke;
   padding-top: 4% ;
+  text-align: center;
 }
+.contact-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact form {
+  padding: 4%;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact form input[type="text"] {
+  width: 30vw;
+ padding: 2%;
+  color: whitesmoke;
+  border: none;
+  border-bottom: 4px solid whitesmoke;
+  background-color: transparent;
+
+}
+
+#contact form textarea {
+ width: 30vw;
+  height: 10vh;
+  color: whitesmoke;
+  border: none;
+  border-bottom: 4px solid whitesmoke;
+  background-color: transparent;
+}
+
+::placeholder{
+  color: gray;
+}
+
+#contact form button {
+  margin: auto;
+  margin-top: 4%;
+  width: 10vw;
+  height: 5vh;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #262320;
+  background-color: lightgray;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+
+ }
+ 
 
 
 
@@ -289,18 +339,16 @@ width: 40vw;
 
 footer{
   width: 100%;
-  height: 10vh;
-  background-image: url("../imgs/Background.jpg");
-  background-size: cover;
-  background-position-y: 80%;
-
   color: whitesmoke;
-  text-align: center;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
+  background-color: #0A0C0A;
 }
 
 footer div{
-  width: 20vw;
+  margin: auto;
+  width: 80%;
+  height: 10vh;
+  border-top: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
