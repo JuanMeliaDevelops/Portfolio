@@ -234,7 +234,7 @@ justify-content: space-around;
 }
 
 .work-cards:hover div {
-  backdrop-filter: brightness(60%);
+  backdrop-filter: brightness(40%);
 }
 
 .work-cards:hover .work-cards-content {
@@ -242,8 +242,11 @@ justify-content: space-around;
   opacity: 1 !important; 
   transition: opacity 0.8s ease;
 }
+.work-cards-content a{
+  padding: 2%;
+} 
+
 .work-cards-content button {
-  margin: 4%;
   width: 10vw;
   height: 5vh;
   color: whitesmoke;
@@ -255,7 +258,11 @@ justify-content: space-around;
   opacity: 1;
 }
 
-
+.work-cards-content button:hover{
+  color: black;
+  background-color: lightgray;
+  border: 2px solid lightgray;
+}
 
 /* Section Contacto */
 
