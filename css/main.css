@@ -200,6 +200,7 @@ justify-content: space-around;
 /* Estilos CSS para las tarjetas de trabajo */
 .work-cards {
   margin: 2%;
+  display: flex;
 }
 
 .work-cards div {
@@ -212,6 +213,7 @@ justify-content: space-around;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .work-cards:hover {
@@ -225,6 +227,7 @@ justify-content: space-around;
 }
 
 .work-cards p {
+width: 40vw;
   padding-left: 2%;
 }
 
@@ -249,19 +252,20 @@ justify-content: space-around;
 .work-cards-content button {
   width: 10vw;
   height: 5vh;
-  color: whitesmoke;
   font-weight: 600;
   font-size: 1.1rem;
-  background-color: black;
-  border: 2px solid black;
+  color: black;
+  background-color: lightgray;
+  border: 2px solid lightgray;
   border-radius: 20px;
   opacity: 1;
 }
 
 .work-cards-content button:hover{
-  color: black;
-  background-color: lightgray;
-  border: 2px solid lightgray;
+  color: whitesmoke;
+  background-color: black;
+  border: 2px solid black;
+ 
 }
 
 /* Section Contacto */
