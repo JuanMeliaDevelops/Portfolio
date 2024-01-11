@@ -280,39 +280,43 @@ width: 40vw;
   padding-top: 4% ;
   text-align: center;
 }
+
+#contact h6{
+font-size: 1.5rem;
+}
+
 .contact-container{
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #contact form {
+  width: 40%;
   padding: 4%;
   color: whitesmoke;
   display: flex;
   flex-direction: column;
 }
 
-#contact form input[type="text"] {
+#contact form input, textarea {
   width: 30vw;
  padding: 2%;
   color: whitesmoke;
   border: none;
-  border-bottom: 4px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
   background-color: transparent;
 
 }
 
-#contact form textarea {
- width: 30vw;
-  height: 10vh;
-  color: whitesmoke;
-  border: none;
-  border-bottom: 4px solid whitesmoke;
-  background-color: transparent;
+#contact form textarea{
+  height: 12vh;
+ resize: none;
 }
 
 ::placeholder{
+padding: 2%;
   color: gray;
 }
 
