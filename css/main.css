@@ -322,7 +322,7 @@ padding: 2%;
 
 #contact form button {
   margin: auto;
-  margin-top: 4%;
+  margin-top: 6%;
   width: 10vw;
   height: 5vh;
   font-weight: 600;
@@ -333,11 +333,14 @@ padding: 2%;
   border-radius: 20px;
 
  }
+
+ #contact form button:hover{
+  color: whitesmoke;
+  background-color: #262320;
+  border: 2px solid #262320;
+  transition: background-color 0.8s ease, color 0.8s ease, border 0.8s ease  ;
+ }
  
-
-
-
-
 
 /* Footer */
 
