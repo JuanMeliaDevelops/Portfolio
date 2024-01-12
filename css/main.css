@@ -199,86 +199,95 @@ justify-content: space-around;
 }
 /* Estilos CSS para las tarjetas de trabajo */
 .work-cards {
-  margin: 2%;
-  display: flex;
+margin: 2%;
+display: flex;
 }
 
-.work-cards div {
-  width: 40vw;
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+.work-cards-main {
+width: 40vw;
+height: 50vh;
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 .work-cards:hover {
-  cursor: pointer;
+cursor: pointer;
 }
 
 
 .work-cards h6 {
-  padding: 2%;
-  font-size: 1.4rem;
-}
-
-.work-cards p {
-width: 40vw;
-  padding-left: 2%;
+padding: 2%;
+font-size: 1.4rem;
 }
 
 .work-cards-content {
-  display: none;
-  opacity: 0;
+display: none;
+opacity: 0;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
-.work-cards:hover div {
-  backdrop-filter: brightness(50%);
+.work-cards-content p {
+width: 70%;
+text-align: center;
+}
+
+.work-cards:hover .work-cards-main {
+  filter: brightness(0.3); 
 }
 
 .work-cards:hover .work-cards-content {
-  display: flex !important;
-  opacity: 1 !important; 
-  transition: opacity 0.8s ease;
+display: flex !important;
+opacity: 1 !important; 
+transition: opacity 0.8s ease;
 }
 .work-cards-content a{
-  padding: 2%;
+padding: 2%;
 } 
 
+.work-cards-content div{
+display: flex;
+flex-direction: row;
+padding-top: 15%;
+
+}
+
 .work-cards-content button {
-  width: 10vw;
-  height: 5vh;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #262320;
-  background-color: lightgray;
-  border: 2px solid lightgray;
-  border-radius: 20px;
-  opacity: 1;
+width: 10vw;
+height: 4vh;
+font-weight: 600;
+font-size: 1.1rem;
+color: whitesmoke;
+background-color: transparent;
+border: 4px solid lightgray;
+border-radius: 20px;
+opacity: 1;
 }
 
 .work-cards-content button:hover{
-  color: whitesmoke;
-  background-color: #262320;
-  border: 2px solid #262320;
- 
+color: whitesmoke;
+background-color: whitesmoke;
+border: 2px solid #262320;
+
 }
 
 /* Section Contacto */
 
 #contact{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #0A0C0A;
-  color: whitesmoke;
-  padding-top: 4% ;
-  text-align: center;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100vh;
+background-color: #0A0C0A;
+color: whitesmoke;
+padding-top: 4% ;
+text-align: center;
 }
 
 #contact h6{
@@ -286,76 +295,76 @@ font-size: 1.5rem;
 }
 
 .contact-container{
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 #contact form {
-  width: 40%;
-  padding: 4%;
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
+width: 40%;
+padding: 4%;
+color: whitesmoke;
+display: flex;
+flex-direction: column;
 }
 
 #contact form input, textarea {
-  width: 30vw;
- padding: 2%;
-  color: whitesmoke;
-  border: none;
-  border-bottom: 2px solid whitesmoke;
-  background-color: transparent;
+width: 30vw;
+padding: 2%;
+color: whitesmoke;
+border: none;
+border-bottom: 2px solid whitesmoke;
+background-color: transparent;
 
 }
 
 #contact form textarea{
-  height: 12vh;
- resize: none;
+height: 12vh;
+resize: none;
 }
 
 ::placeholder{
 padding: 2%;
-  color: gray;
+color: gray;
 }
 
 #contact form button {
-  margin: auto;
-  margin-top: 6%;
-  width: 10vw;
-  height: 5vh;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #262320;
-  background-color: lightgray;
-  border: 2px solid lightgray;
-  border-radius: 20px;
+margin: auto;
+margin-top: 6%;
+width: 10vw;
+height: 5vh;
+font-weight: 600;
+font-size: 1.1rem;
+color: #262320;
+background-color: lightgray;
+border: 2px solid lightgray;
+border-radius: 20px;
 
- }
+}
 
- #contact form button:hover{
-  color: whitesmoke;
-  background-color: #262320;
-  border: 2px solid #262320;
-  transition: background-color 0.8s ease, color 0.8s ease, border 0.8s ease  ;
- }
- 
+#contact form button:hover{
+color: whitesmoke;
+background-color: #262320;
+border: 2px solid #262320;
+transition: background-color 0.8s ease, color 0.8s ease, border 0.8s ease  ;
+}
+
 
 /* Footer */
 
 footer{
-  width: 100%;
-  color: whitesmoke;
-  background-color: #0A0C0A;
+width: 100%;
+color: whitesmoke;
+background-color: #0A0C0A;
 }
 
 footer div{
-  margin: auto;
-  width: 80%;
-  height: 10vh;
-  border-top: 2px solid gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+margin: auto;
+width: 80%;
+height: 10vh;
+border-top: 2px solid gray;
+display: flex;
+justify-content: center;
+align-items: center;
 }

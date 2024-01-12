@@ -85,7 +85,7 @@ categories.forEach(function (category) {
                 setTimeout(() => {
                     card.classList.add('animate__bounceIn');
                 }, 100);
-            }
+            }       
         });
     });
 });
