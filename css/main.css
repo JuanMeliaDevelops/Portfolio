@@ -226,6 +226,10 @@ font-size: 1.4rem;
 }
 
 .work-cards-content {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(0.4);
+  border-radius: 20px;
 display: none;
 opacity: 0;
 flex-direction: column;
@@ -236,10 +240,6 @@ align-items: center;
 .work-cards-content p {
 width: 70%;
 text-align: center;
-}
-
-.work-cards:hover .work-cards-main {
-  filter: brightness(0.3); 
 }
 
 .work-cards:hover .work-cards-content {
@@ -254,7 +254,8 @@ padding: 2%;
 .work-cards-content div{
 display: flex;
 flex-direction: row;
-padding-top: 15%;
+align-items: center;
+
 
 }
 
@@ -271,9 +272,9 @@ opacity: 1;
 }
 
 .work-cards-content button:hover{
-color: whitesmoke;
+color: #262320;
 background-color: whitesmoke;
-border: 2px solid #262320;
+border: 2px solid whitesmoke;
 
 }
 
