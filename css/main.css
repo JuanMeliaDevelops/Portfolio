@@ -30,8 +30,8 @@ background-size: cover;
 background-position-y: 60%;
 margin: 0;
 padding: 0;
-
 }
+
 #home nav{
 width: 100%;
 height: 15vh;
@@ -164,7 +164,6 @@ background-color: #262320;
 color: whitesmoke;
 margin: 0;
 padding: 0;
-
 }
 
 #work ul{
@@ -195,8 +194,8 @@ width: 100%;
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-
 }
+
 /* Estilos CSS para las tarjetas de trabajo */
 .work-cards {
 margin: 2%;
@@ -225,28 +224,30 @@ padding: 2%;
 font-size: 1.4rem;
 }
 
+
 .work-cards-content {
   width: 100%;
   height: 100%;
   backdrop-filter: brightness(0.4);
   border-radius: 20px;
-display: none;
-opacity: 0;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
+.work-cards:hover .work-cards-content {
+  opacity: 1;
+}
+
 
 .work-cards-content p {
 width: 70%;
 text-align: center;
 }
 
-.work-cards:hover .work-cards-content {
-display: flex !important;
-opacity: 1 !important; 
-transition: opacity 0.8s ease;
-}
+
 .work-cards-content a{
 padding: 2%;
 } 
