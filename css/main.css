@@ -276,6 +276,7 @@ opacity: 1;
 color: #262320;
 background-color: whitesmoke;
 border: 2px solid whitesmoke;
+transition: background-color 0.8s ease, color 0.8s ease, border 0.8s ease  ;
 
 }
 
