@@ -306,7 +306,7 @@ body {
 
 }
 
-#contact h6 {
+#contact h5 {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -316,10 +316,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #0A0C0A ;
+  color: #0A0C0A;
 }
 
-.container-background{
+.container-background {
   width: 100%;
   height: 40vh;
   display: flex;
@@ -338,38 +338,38 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-
 }
 
-.contact-datos{
+.contact-datos {
   display: flex;
   justify-content: center;
   align-items: center;
-padding: 4%;
+  padding: 4%;
 }
 
-.contact-datos h7{
+.contact-datos h6 {
   font-size: 1.1rem;
 }
-.contact-datos img{
+
+.contact-datos img {
   width: 12%;
 }
 
-.contact-socials{
+.contact-socials {
   width: 50%;
   display: flex;
   justify-content: space-around;
 }
 
-.contact-socials a:hover{
-    opacity: 0.4;
-    transition: opacity 0.8s ease;
+.contact-socials a:hover {
+  opacity: 0.4;
+  transition: opacity 0.8s ease;
 }
 
-.container-form{
+.container-form {
   padding: 2%;
-  width: 35%;
-  height: 60vh;
+  width: 30%;
+  height: 58vh;
   background-color: whitesmoke;
   justify-content: center;
   align-items: center;
@@ -382,7 +382,7 @@ padding: 4%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .container-form form input,
@@ -390,7 +390,7 @@ textarea {
   width: 80%;
   padding-top: 2%;
   padding-bottom: 2%;
-  margin-top: 4% ;
+  margin-top: 4%;
   color: #262320;
   border: none;
   border-bottom: 3px solid black;
@@ -432,18 +432,49 @@ textarea {
 /* Footer */
 
 footer {
-  padding-top: 4%;
   width: 100%;
+  padding-top: 4%;
   color: whitesmoke;
   background-color: #0A0C0A;
 }
 
-footer div {
+.footer-container {
+  height: 20%;
   margin: auto;
+  padding-top: 2dvb;
+  padding-bottom: 2%;
   width: 80%;
-  height: 10vh;
   border-top: 2px solid gray;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.footer-socials img {
+  width: 60%;
+}
+
+.footer-links {
+  height: 20%;
+  width: 15%;
+}
+
+.footer-links ul {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.footer-links ul div{
+width: 60%;
+}
+
+.footer-links ul li {
+  text-align: justify;
 }
