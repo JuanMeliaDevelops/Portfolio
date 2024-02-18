@@ -32,7 +32,7 @@ body {
   padding: 0;
 }
 
-#home nav {
+.navBar {
   width: 100%;
   height: 15vh;
   padding-top: 2%;
@@ -485,11 +485,43 @@ footer {
   text-align: center;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+
 }
 
 .footer-links ul li {
-  width: 100%;
-  text-align: justify;
-  padding: 2%; 
+  text-align: center;
   margin: 2%;
 }     
+
+
+#sobreMi{
+  color: whitesmoke;
+  text-align: center;
+  height: 100vh;
+  background-image: url("../imgs/Background.jpg");
+  background-size: cover;
+  background-position-y: 60%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* Responsive */
+
+/* Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+
+
+  
+  }
