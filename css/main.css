@@ -97,12 +97,17 @@ body {
 }
 
 .avatar {
-  width: 15vw;
-  height: 40vh;
+  width: 18vw;
+  height: 42vh;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
 }
 
 .home-info {
-  width: 28%;
+  width: 30%;
 }
 
 .home-info h1 {
@@ -506,7 +511,67 @@ footer {
   padding: 0;
 }
 
+.sobreMi-mainContainer {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
+
+.sobreMi-mainContainer h1 {
+  font-family: 'Jost', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.sobreMi-mainContainer h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.sobreMi-main{
+  text-align: center;
+}
+.sobreMi-cats{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+.sobreMi-main button{
+  width: 15vw;
+  height: 4vh;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  background-color: transparent;
+  border: 4px solid lightgray;
+  border-radius: 20px;
+  opacity: 1;
+  margin: auto;
+  margin-top: 6%;
+}
+.sobreMi-main button:hover {
+  color: #262320;
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
+  transition: background-color 0.8s ease, color 0.8s ease, border 0.8s ease;
+
+}
+
+.sobreMi-cats{
+  margin-top: 4%;
+  margin: auto;
+}
+
+.sobreMi-info{
+  width: 30%;
+}
 
 
 /* Responsive */
