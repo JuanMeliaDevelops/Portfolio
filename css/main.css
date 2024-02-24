@@ -550,9 +550,23 @@ footer {
   font-size: 1.2rem;
 }
 
+.sobreMi-Cats-Container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-inline: 20vw;
+  justify-content: center;
+  background-color: #0A0C0A;
+}
+.sobreMi-Cats-Card{
+  height: 35vh;
+}
 
+.sobreMi-Cats-Card img{
+  height: 100%;
+  width: 100%;
 
-
+}
 
 
 /* Responsive */
