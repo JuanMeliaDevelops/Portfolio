@@ -503,7 +503,7 @@ footer {
 #sobreMi{
   color: whitesmoke;
   text-align: center;
-  height: 100vh;
+  height: 90vh;
   background-image: url("../imgs/Background.jpg");
   background-size: cover;
   background-position-y: 60%;
@@ -542,7 +542,7 @@ footer {
 
 }
 
-.sobreMi-Bio{
+.sobreMi-bio{
   margin-top: 20vh;
   justify-content: center;
   align-items: center;
@@ -550,7 +550,7 @@ footer {
   font-size: 1.2rem;
 }
 
-.sobreMi-Cats-Container{
+.sobreMi-cats-container{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -558,11 +558,16 @@ footer {
   justify-content: center;
   background-color: #0A0C0A;
 }
-.sobreMi-Cats-Card{
+.sobreMi-Cats-Content{
   height: 35vh;
+  padding: 2%;
 }
 
-.sobreMi-Cats-Card img{
+.sobreMi-cats-content:hover{
+  filter: brightness(1.4);
+  transition: filter 0.8s ease;
+}
+.sobreMi-cats-content img{
   height: 100%;
   width: 100%;
 
