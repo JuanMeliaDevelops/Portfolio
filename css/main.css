@@ -542,6 +542,12 @@ footer {
 
 }
 
+.selected-button{
+  color: #262320 !important;
+  background-color: whitesmoke !important;
+  border: 2px solid whitesmoke !important;
+}
+
 .sobreMi-bio{
   margin-top: 20vh;
   justify-content: center;
@@ -558,7 +564,8 @@ footer {
   justify-content: center;
   background-color: #0A0C0A;
 }
-.sobreMi-Cats-Content{
+.sobreMi-cats-Content{
+  display: none;
   height: 35vh;
   padding: 2%;
 }
