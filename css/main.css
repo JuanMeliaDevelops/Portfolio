@@ -503,7 +503,7 @@ footer {
 #sobreMi{
   color: whitesmoke;
   text-align: center;
-  height: 90vh;
+  height: 100vh;
   background-image: url("../imgs/Background.jpg");
   background-size: cover;
   background-position-y: 60%;
@@ -568,6 +568,10 @@ footer {
   display: none;
   height: 35vh;
   padding: 2%;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 4s;
 }
 
 .sobreMi-cats-content:hover{
