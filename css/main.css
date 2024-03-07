@@ -560,14 +560,14 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding-inline: 20vw;
+  padding-inline: 10vw;
   justify-content: center;
   background-color: #0A0C0A;
 }
 .sobreMi-cats-Content{
   display: none;
   height: 35vh;
-  padding: 2%;
+  padding: 0.5%;
 }
 
 .animate__animated.animate__fadeIn {
