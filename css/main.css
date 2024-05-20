@@ -174,23 +174,42 @@ body {
 
 #work ul {
   display: flex;
-  width: 40vw;
+  width: 90vw;
   padding-top: 10vh;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
 }
 
 #work ul li {
-  padding: 2%;
+  text-align: center;
+  background-color: whitesmoke;
+  color: #262320;
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  margin: 4%;
+  padding-right: 2%;
+  padding-left: 2%;
+  width: 10%;
+  height: 8%;
   font-weight: 600;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+
 }
 
 
 #work ul li:hover {
-  opacity: 0.4;
+  opacity: 0.4; /* Cambié a 0.8 para que sea más visible en hover */
+  transform: translateY(-3px); /* Efecto de desplazamiento */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más intensa en hover */
   transition: opacity 0.8s ease;
+}
+
+#work ul li:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 35, 32, 0.3); /* Resaltado de enfoque */
 }
 
 .work-container {

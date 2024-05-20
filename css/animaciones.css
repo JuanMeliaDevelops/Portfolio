@@ -60,9 +60,15 @@ background-color: transparent;
 /* Categorias Work-Cards */ 
 
 .selected-category{
-  font-weight: 900;
-  text-decoration: underline;
-  pointer-events: none;
+  background-color: #262320 !important; /* Fondo más oscuro para el seleccionado */
+  color: white !important; /* Texto en blanco */
+  border: 2px solid #262320 !important; /* Borde acorde al fondo */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8) !important;  /* Sombra más intensa y elevada */
+  transform: translateY(-5px) !important; /* Elevación del botón */
+  pointer-events: none !important;
+  transform: translateY(-3px) !important;
+
+
 }
 
 
