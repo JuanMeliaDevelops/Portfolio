@@ -21,6 +21,18 @@ body {
 
 /* Section Home */
 
+.alertas {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: gray;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  display: none;
+}
+
 #home {
   color: whitesmoke;
   text-align: center;
@@ -97,13 +109,15 @@ body {
 }
 
 .avatar {
-  width: 18vw;
+  width: 16vw;
   height: 42vh;
+
 }
 
 .avatar img {
   width: 100%;
   height: 100%;
+  border-radius: 120px;
 }
 
 .home-info {
@@ -175,7 +189,7 @@ body {
 #work ul {
   display: flex;
   width: 90vw;
-  padding-top: 10vh;
+  padding-top: 4vh;
   justify-content: center;
   margin: 0 auto;
 }
@@ -213,23 +227,24 @@ body {
 }
 
 .work-container {
-  padding-top: 4%;
+  padding-top: 2vw;
   padding-bottom: 4%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 /* Estilos CSS para las tarjetas de trabajo */
 .work-cards {
-  margin: 2%;
+  width: 40%;
+  margin: 1% 1% 2%;
   display: flex;
 }
 
 .work-cards-main {
-  width: 40vw;
-  height: 50vh;
+  width: 100%;
+  height: 45vh;
   background-size: cover;
   background-position: center;
   border-radius: 20px;
