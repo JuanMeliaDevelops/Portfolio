@@ -1,22 +1,8 @@
-function validacionTelefono(event) {
-    if(event.charCode >= 48 && event.charCode <= 57){
-      return true;
-     };
-   
-     return false; 
-}
+// Envio de Form Jquery con Alertas en Placeholders
 
 
 $('#submit').click(function(){
   
-    
-    //Resetar alertas
-    $('#alertaName').css('display','none')
-    $('#alertaEmail').css('display','none')
-    $('#alertaMessage').css('display','none')
-    $('#alertaSubject').css('display','none')
-    $('#msgSubmit').css('color','#546E7A').text('')
-
     //Valores de inputs
     var name = $('#name').val();
     var email = $('#email').val();
@@ -29,24 +15,31 @@ $('#submit').click(function(){
     var validado = 1;
 
     if(!validacionCorreo.test(email)){
-        $('#alertaEmail').css('display','block').text('Ingresa un correo electronico valido');
+         $('#email').val("");
+        $('#email').attr('placeholder', 'Ingresa un correo electronico válido');
+        $('#email').addClass('custom-placeholder');
         validado = 0;
-
     }
 
     if (name.length <= 5 ){
-        $('#alertaName').css('display','block').text('Ingresa tu nombre completo');
+        $('#name').val("");
+        $('#name').attr('placeholder', 'Ingresa tu nombre completo');
+        $('#name').addClass('custom-placeholder');
         validado = 0;
     }
 
     if (subject.length <= 4 ){
-        $('#alertaSubject').css('display','block').text('Ingresa un asunto valido');
+         $('#msg_subject').val("");
+        $('#msg_subject').attr('placeholder', 'Ingresa un asunto válido');
+        $('#msg_subject').addClass('custom-placeholder');
         validado = 0;
     }
   
 
     if (message.length <=20 ){
-        $('#alertaMessage').css('display','block').text('Tu mensaje debe ser mas largo');
+       $('#message').val("");
+        $('#message').attr('placeholder', 'Tu mensaje debe ser mas largo');
+        $('#message').addClass('custom-placeholder');
         validado = 0;
     }
 
@@ -67,12 +60,12 @@ $('#submit').click(function(){
               if (parseInt(res) == 1){
                 $('#msgSubmit').text('Tu mensaje ha sido enviado con exito!')
               } else{
-                $('#msgSubmit').css('color','red').text('Ha ocurrido un error al enviar tu mensaje, porfavor intenta de nuevo.')
+                $('#msgSubmit').css('color','red').text('Ha ocurrido un error al enviar tu mensaje, porfavor intentalo de nuevo mas tarde.')
               }
             },
 
             error: function (res) {
-                $('#msgSubmit').css('color','red').text('Ha ocurrido un error al enviar tu mensaje, porfavor intenta de nuevo.')
+                $('#msgSubmit').css('color','red').text('Ha ocurrido un error al enviar tu mensaje, porfavor intentalo de nuevo mas tarde.')
             }
         });
 
