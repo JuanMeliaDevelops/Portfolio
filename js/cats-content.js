@@ -26,7 +26,6 @@ function showSelectedCategory(selectedCategory) {
 categories.forEach(function (category) {
 
 
-
     category.addEventListener('click', function () {
         categories.forEach(button => {
 

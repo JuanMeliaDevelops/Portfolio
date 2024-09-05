@@ -1,8 +1,21 @@
 // Envio de Form Jquery con Alertas en Placeholders
 
 
-$('#submit').click(function(){
+$('#submit').click(enviarForm);
+
+// Funciona al apretar ENTER
+$('.container-form input, .container-form textarea').keypress(function(event) {
+    if (event.which === 13) {
+        event.preventDefault();
+        enviarForm();
   
+    }
+});
+
+  
+// Funcion Envio Form
+    function enviarForm() {
+      
     //Valores de inputs
     var name = $('#name').val();
     var email = $('#email').val();
@@ -72,5 +85,5 @@ $('#submit').click(function(){
     }
 
     
-    });
+    };
 

@@ -13,9 +13,6 @@ if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["subject"]) 
     $header = "From: " . $email . "\r\n" . "reply: " . $email . "\r\n" . "X-Mailer: PHP/" . phpVersion();
     $mail = mail($destino, $asunto, $contenido, $header);
 
-
-
-
     if ($mail) {
       echo 1;
     } else {

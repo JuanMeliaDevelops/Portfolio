@@ -65,13 +65,35 @@ body {
   font-size: larger;
   margin-left: 4%;
   margin-right: 4%;
+  width: 10%;
+}
+
+.contactameButton{
   font-weight: 700;
 }
 
-.nav-sides:hover {
-  transform: scale(1.1);
-  transition: transform 0.8s ease;
+.contactameButton:hover{
+  opacity: 0.4;
+  transition: opacity 0.8s ease;
 }
+
+.languages{
+  cursor: pointer;
+  margin: auto;
+  justify-content: space-around;
+
+}
+
+.language-selected{
+  cursor: default;
+  font-weight: 700;
+}
+
+.languages li:hover {
+  font-weight: 700;
+  transition: opacity 0.4s ease, font-weight 0.8s ease;
+}
+
 
 #scroll-down {
   position: absolute;
@@ -79,7 +101,6 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  /* Centrar horizontalmente */
   text-align: center;
   padding-bottom: 20px;
   width: 20vw;
@@ -401,6 +422,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
 }
 
 .container-form form {
@@ -429,6 +451,7 @@ textarea {
   background-color: #f8d7da;
   border-color: #f5c6cb;
   height: 80%;
+  border-radius: 4px;
 }
 
 
@@ -640,3 +663,4 @@ footer {
 
   
   }
+  
