@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 a {
@@ -73,6 +73,7 @@ body {
 }
 
 .contactameButton:hover{
+  cursor: pointer;
   opacity: 0.4;
   transition: opacity 0.8s ease;
 }
@@ -112,13 +113,14 @@ body {
   width: 100%;
   height: 60vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 
 }
 
 .avatar {
-  width: 16vw;
+  width: 350px;
   height: 42vh;
 
 }
