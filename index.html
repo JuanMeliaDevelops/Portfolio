@@ -12,8 +12,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-      <!-- Link de jQuery desde el CDN -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Link de jQuery desde el CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Meta -->
     <meta property="og:title" content="Portfolio - Juan Melia">
@@ -45,7 +45,7 @@
 
         <nav class="navBar">
 
-            <a href="index.html#contact" class="nav-sides contactameButton p-4">Contactame</a>
+            <a href="#contact" class="nav-sides contactameButton p-4 smooth-scroll">Contactame</a>
 
             <ul class="home-nav">
                 <li><a href="index.html">Inicio</a> </li>
@@ -53,11 +53,11 @@
                 <li><a href="JuanMelia-CV.pdf" target="_blank">Resumen</a></li>
             </ul>
 
-            <div class="nav-sides p-4 items-center" >
-                <ul class="languages d-flex " >
-                    <li class="language-selected">ES</li>
+            <div class="nav-sides p-4 items-center">
+                <ul class="languages d-flex ">
+                    <li class="language-selected" onclick="setLanguage('es')">ES</li>
                     <p>/</p>
-                    <li>EN</li>
+                    <li onclick="setLanguage('en')">EN</li>
                 </ul>
 
             </div>
@@ -105,7 +105,7 @@
 
         </div>
 
-        <a href="#work">
+        <a href="#work" class="smooth-scroll">
             <div id="scroll-down">
                 <p>Mira mis trabajos</p>
                 <img src="imgs/icons/down-arrow.png">
@@ -163,7 +163,7 @@
                                 <button>Ver Prototipo</button></a>
                             <a target="_blank"
                                 href="https://www.behance.net/gallery/188618437/Rediseno-de-Interfaz-Cajero-Banelco-Deposito-Bancario/modules/1066587007"><button>Ver
-                                    Presentacion</button></a>
+                                    Presentación</button></a>
                         </div>
                     </div>
                 </div>
@@ -186,10 +186,12 @@
             </div>
 
             <div class="work-cards animate__animated" data-category="desarrollo ">
-                <div class="work-cards-main" style="background-image: url('imgs/works/desarrollo/work-diagnosticobsas.jpg');">
+                <div class="work-cards-main"
+                    style="background-image: url('imgs/works/desarrollo/work-diagnosticobsas.jpg');">
                     <div class="work-cards-content">
                         <p>Diseño y desarrollo de Landing Page para Diagnostico Buenos Aires.</p>
-                        <a target="_blank" href="https://juanmeliadevelops.github.io/diagnosticoBuenosAires/"> <button>Ver Sitio Web</button></a>
+                        <a target="_blank" href="https://juanmeliadevelops.github.io/diagnosticoBuenosAires/">
+                            <button>Ver Sitio Web</button></a>
                     </div>
                 </div>
                 <h6>Diagnostico Buenos Aires - Landing Page</h6>
@@ -199,15 +201,15 @@
                 <div class="work-cards-main" style="background-image: url('imgs/works/desarrollo/work-hcsa.jpg');">
                     <div class="work-cards-content">
                         <p>Diseño y desarrollo de Landing Page para Hogar Construcciones.</p>
-                        <a target="_blank" href="https://juanmeliadevelops.github.io/hcsa/"> <button>Ver Sitio Web</button></a>
+                        <a target="_blank" href="https://juanmeliadevelops.github.io/hcsa/"> <button>Ver Sitio
+                                Web</button></a>
                     </div>
                 </div>
                 <h6>Hogar Construcciones - Landing Page</h6>
             </div>
-     
+
             <div class="work-cards animate__animated" data-category="desarrollo">
-                <div class="work-cards-main"
-                    style="background-image: url('imgs/works/desarrollo/work-deliberry.jpg');">
+                <div class="work-cards-main" style="background-image: url('imgs/works/desarrollo/work-deliberry.jpg');">
                     <div class="work-cards-content">
 
                         <p>Diseño y desarrollo de Landing Page para Deliberry. <br>
@@ -226,7 +228,7 @@
                 <h6>Deliberry - Web Design</h6>
             </div>
 
-         
+
 
 
             <!-- Design Work-Cards -->
@@ -235,8 +237,8 @@
                 <div class="work-cards-main" style="background-image: url('imgs/works/diseño/work-costube.jpg');">
                     <div class="work-cards-content">
                         <p>Trabajo final Diseño UX/UI en Coderhouse.<br>
-                            Costube, App diseñada por y para Cosplayers. 
-                    </p>
+                            Costube, App diseñada por y para Cosplayers.
+                        </p>
                         <div>
                             <a target="_blank"
                                 href="https://www.figma.com/proto/eJztLEna0YfUboXNtRku6q/Costube?type=design&t=AEyN7wFzvhlC6QdC-8&scaling=min-zoom&page-id=0%3A1&node-id=2-970&starting-point-node-id=2%3A970&hide-ui=1">
@@ -244,7 +246,7 @@
 
                             <a target="_blank"
                                 href="https://docs.google.com/presentation/d/1Gh3iLmncrT6RRjgJDohLmC-BTjMF9OSEoxHx6SUl8jw/edit?usp=sharing"><button>Ver
-                                    Presentacion</button></a>
+                                    Presentación</button></a>
                         </div>
 
                     </div>
@@ -259,17 +261,47 @@
 
             <div class="work-cards animate__animated" data-category="marketing">
                 <div class="work-cards-main"
+                    style="background-image: url('imgs/works/marketing/works-colgate.jpg');">
+                    <div class="work-cards-content">
+                        <p>Trabajo final para materia de "Publicidad" en la Universidad de Palermo.</p>
+                        <a target="_blank"
+                            href="https://www.behance.net/gallery/207870889/Colgate-Everywhere-by-Publicity-Crew">
+                            <button>Ver Presentación</button></a>
+                    </div>
+                </div>
+                <h6>Colgate Everywhere By Publicity Crew</h6>
+            </div>
+
+            <div class="work-cards animate__animated" data-category="marketing">
+                <div class="work-cards-main"
                     style="background-image: url('imgs/works/marketing/works-reutilizar.jpg');">
                     <div class="work-cards-content">
-                        <p>Trabajo final para materia de "Comercializacion" en la Universidad de Palermo.</p>
+                        <p>Trabajo final para materia de "Comercialización" en la Universidad de Palermo.</p>
                         <a target="_blank"
                             href="https://docs.google.com/presentation/d/16Z1AVyG7g4X0bvB_Byk893kkDECzFC-pytHkhHk0kEU/edit?usp=sharing">
-                            <button>Ver Presentacion</button></a>
+                            <button>Ver Presentación</button></a>
                     </div>
                 </div>
                 <h6>Reutilizar - Comprar y Venta de ropa</h6>
-
             </div>
+
+
+            <div class="work-cards animate__animated" data-category="marketing">
+                <div class="work-cards-main"
+                    style="background-image: url('imgs/works/marketing/works-enchastre.jpg');">
+                    <div class="work-cards-content">
+                        <p>Trabajo final para materia de "Comercialización II" en la Universidad de Palermo.</p>
+                        <a target="_blank"
+                            href="https://www.behance.net/gallery/207870403/Enchastre-Comercializacion">
+                            <button>Ver Presentación</button></a>
+                    </div>
+                </div>
+                <h6>Enchastre - Cerámicas de autor</h6>
+            </div>
+
+
+
+            
 
 
 
@@ -316,17 +348,17 @@
                     <h5>¡Trabajemos juntos!</h5>
 
                     <form>
-                            <input type="text" name="name" id="name" placeholder="Nombre \ Empresa" required>
-                            <input type="text" name="email" id="email" placeholder="Email" required>
-                            <input type="text" name="asunto" id="msg_subject" placeholder="Asunto" required>      
-                            <textarea name="mensaje" id="message" required placeholder="Mensaje"></textarea>
-                            
-                            <button type="button" id="submit">Enviar</button>
-                            <div id="msgSubmit" class="h4 pt-3"></div>
+                        <input type="text" name="name" id="name" placeholder="Nombre \ Empresa" required>
+                        <input type="text" name="email" id="email" placeholder="Email" required>
+                        <input type="text" name="asunto" id="msg_subject" placeholder="Asunto" required>
+                        <textarea name="mensaje" id="message" required placeholder="Mensaje"></textarea>
+
+                        <button type="button" id="submit">Enviar</button>
+                        <div id="msgSubmit" class="h4 pt-3"></div>
                     </form>
 
                 </div>
-                
+
 
             </div>
 
