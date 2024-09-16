@@ -15,9 +15,8 @@ li {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
 
 /* Section Home */
 
@@ -55,11 +54,10 @@ body {
   width: 6vw;
 }
 
-.home-nav li a:Hover {
+.home-nav li a:hover {
   opacity: 0.4;
   transition: opacity 0.8s ease;
 }
-
 
 .nav-sides {
   font-size: larger;
@@ -68,39 +66,37 @@ body {
   width: 10%;
 }
 
-.contactameButton{
+.contactameButton {
   font-weight: 700;
 }
 
-.contactameButton:hover{
+.contactameButton:hover {
   cursor: pointer;
   opacity: 0.4;
   transition: opacity 0.8s ease;
 }
 
-.languages{
+.languages {
   cursor: pointer;
   margin: auto;
   justify-content: space-around;
-
 }
 
-.language-selected{
+.language-selected {
   cursor: default;
   font-weight: 700;
 }
 
-.language-selected:hover{
-opacity: 1 !important;
+.language-selected:hover {
+  cursor: default !important;
+  opacity: 1 !important;
 }
-
 
 .languages li:hover {
   cursor: pointer;
   opacity: 0.4;
   transition: opacity 0.8s ease;
 }
-
 
 #scroll-down {
   position: absolute;
@@ -114,21 +110,18 @@ opacity: 1 !important;
   height: 10vh;
 }
 
-
 .home-mainContainer {
   width: 100%;
   height: 60vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-
 }
 
 .avatar {
   width: 330px;
   height: 42vh;
-
 }
 
 .avatar img {
@@ -142,7 +135,7 @@ opacity: 1 !important;
 }
 
 .home-info h1 {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: bold;
   font-size: 2rem;
 }
@@ -183,14 +176,11 @@ opacity: 1 !important;
 .home-btn:hover img {
   transform: scale(1.2);
   transition: transform 0.8s ease;
-
 }
-
 
 .home-btn:hover p {
   transform: scale(0.9);
   transition: transform 0.8s ease;
-
 }
 
 /* Section Trabajos */
@@ -227,9 +217,7 @@ opacity: 1 !important;
   cursor: pointer;
   transition: all 0.3s ease; /* Transición suave para todos los cambios */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
-
 }
-
 
 #work ul li:hover {
   opacity: 0.4; /* Cambié a 0.8 para que sea más visible en hover */
@@ -275,12 +263,10 @@ opacity: 1 !important;
   cursor: pointer;
 }
 
-
 .work-cards h6 {
   padding: 2%;
   font-size: 1.4rem;
 }
-
 
 .work-cards-content {
   width: 100%;
@@ -299,12 +285,10 @@ opacity: 1 !important;
   opacity: 1;
 }
 
-
 .work-cards-content p {
   width: 70%;
   text-align: center;
 }
-
 
 .work-cards-content a {
   padding: 2%;
@@ -314,8 +298,6 @@ opacity: 1 !important;
   display: flex;
   flex-direction: row;
   align-items: center;
-
-
 }
 
 .work-cards-content button {
@@ -336,8 +318,10 @@ opacity: 1 !important;
   color: #262320;
   background-color: whitesmoke;
   border: 2px solid whitesmoke;
-  transition: background-color 0.8s ease, color 0.8s ease, border 0.8s ease;
-
+  transition:
+    background-color 0.8s ease,
+    color 0.8s ease,
+    border 0.8s ease;
 }
 
 /* Section Contacto */
@@ -348,18 +332,15 @@ opacity: 1 !important;
   padding-top: 2%;
   width: 100%;
   height: 100vh;
-  background-color: #0A0C0A;
+  background-color: #0a0c0a;
   color: whitesmoke;
   padding-top: 4%;
   text-align: center;
 }
 
-
 #contact h4 {
   text-transform: uppercase;
-  font-family: 'Jost', sans-serif;
-
-
+  font-family: "Jost", sans-serif;
 }
 
 #contact h5 {
@@ -372,7 +353,7 @@ opacity: 1 !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #0A0C0A;
+  color: #0a0c0a;
 }
 
 .container-background {
@@ -462,7 +443,6 @@ textarea {
   border-radius: 4px;
 }
 
-
 #contact form textarea {
   height: 12vh;
   resize: none;
@@ -472,7 +452,6 @@ textarea {
   padding: 2%;
   color: black;
 }
-
 
 #contact form button {
   margin: auto;
@@ -490,7 +469,10 @@ textarea {
 #contact form button:hover {
   color: #262320;
   background-color: lightgray;
-  transition: background-color 0.8s ease, color 0.8s ease, border 0.8s ease;
+  transition:
+    background-color 0.8s ease,
+    color 0.8s ease,
+    border 0.8s ease;
 }
 
 .input-container {
@@ -499,16 +481,13 @@ textarea {
   margin-bottom: 20px;
 }
 
-
-
-
 /* Footer */
 
 footer {
   width: 100%;
   padding-top: 4%;
   color: whitesmoke;
-  background-color: #0A0C0A;
+  background-color: #0a0c0a;
 }
 
 .footer-container {
@@ -523,7 +502,7 @@ footer {
   align-items: center;
 }
 
-.footer-label{
+.footer-label {
   width: 33%;
   display: flex;
   flex-direction: column;
@@ -537,10 +516,9 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-
 }
 
-.footer-socials div{
+.footer-socials div {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -561,16 +539,14 @@ footer {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .footer-links ul li {
   text-align: center;
   margin: 2%;
-}     
+}
 
-
-#sobreMi{
+#sobreMi {
   color: whitesmoke;
   text-align: center;
   height: 100vh;
@@ -581,15 +557,14 @@ footer {
   padding: 0;
 }
 
-
-.sobreMi-cats{
+.sobreMi-cats {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 6%;
 }
 
-.sobreMi-cats button{
+.sobreMi-cats button {
   width: 15vw;
   height: 4vh;
   font-weight: 600;
@@ -608,17 +583,19 @@ footer {
   color: #262320;
   background-color: whitesmoke;
   border: 2px solid whitesmoke;
-  transition: background-color 0.8s ease, color 0.8s ease, border 0.8s ease;
-
+  transition:
+    background-color 0.8s ease,
+    color 0.8s ease,
+    border 0.8s ease;
 }
 
-.selected-button{
+.selected-button {
   color: #262320 !important;
   background-color: whitesmoke !important;
   border: 2px solid whitesmoke !important;
 }
 
-.sobreMi-bio{
+.sobreMi-bio {
   margin-top: 20vh;
   justify-content: center;
   align-items: center;
@@ -626,15 +603,15 @@ footer {
   font-size: 1.2rem;
 }
 
-.sobreMi-cats-container{
+.sobreMi-cats-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   padding-inline: 10vw;
   justify-content: center;
-  background-color: #0A0C0A;
+  background-color: #0a0c0a;
 }
-.sobreMi-cats-Content{
+.sobreMi-cats-Content {
   display: none;
   height: 35vh;
   padding: 0.5%;
@@ -644,31 +621,23 @@ footer {
   --animate-duration: 4s;
 }
 
-.sobreMi-cats-content:hover{
+.sobreMi-cats-content:hover {
   filter: brightness(1.4);
   transition: filter 0.8s ease;
 }
-.sobreMi-cats-content img{
+.sobreMi-cats-content img {
   height: 100%;
   width: 100%;
-
 }
-
 
 /* Responsive */
 
 /* Tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
 }
-
 
 /* Mobile */
 
 @media screen and (max-width: 767px) {
-
-
-  
-  }
-  
+}
