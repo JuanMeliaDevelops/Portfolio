@@ -37,27 +37,41 @@
 
 </head>
 
+<!-- Loader -->
+
+<div id="loader" style="display: none;">
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</div>
+
+<!-- Loader END -->
+
+<body id="body">
 
 
-<body>
 
     <section id="home">
 
         <nav class="navBar">
 
-            <a href="#contact" class="nav-sides contactameButton p-4 smooth-scroll">Contactame</a>
+            <a href="#contact" class="nav-sides contactameButton p-4 smooth-scroll"
+                data-lang-en="Contact me">Contactame</a>
 
             <ul class="home-nav">
-                <li><a href="index.html">Inicio</a> </li>
-                <li><a href="sobreMi.html">Sobre Mí</a> </li>
-                <li><a href="JuanMelia-CV.pdf" target="_blank">Resumen</a></li>
+                <li><a href="index.html" data-lang-en="Home">Inicio</a> </li>
+                <li><a href="sobreMi.html" data-lang-en="About me">Sobre Mí</a> </li>
+                <li><a href="JuanMelia-CV.pdf" target="_blank" data-lang-en="Resume">Resumen</a></li>
             </ul>
 
             <div class="nav-sides p-4 items-center">
                 <ul class="languages d-flex ">
-                    <li class="language language-selected" onclick="setLanguage('es')">ES</li>
+                    <li class="language" onclick="setLanguage('es')">ES</li>
                     <p>/</p>
-                    <li class="language " onclick="setLanguage('en')">EN</li>
+                    <li class="language" onclick="setLanguage('en')">EN</li>
                 </ul>
 
             </div>
@@ -65,7 +79,7 @@
         </nav>
 
 
-        <div class="home-mainContainer ">
+        <div id="home-mainContainer">
 
             <div class="avatar">
                 <img src="imgs/avatar.png" alt="Juan Melia - Desarrollador y Diseñador Portfolio Imagen de perfil">
@@ -74,9 +88,11 @@
 
             <div class="home-info">
 
-                <h1 class="text-justify" id="greetingText">Hola! Mi nombre es Juan Melia.</h1>
+                <h1 class="text-justify" data-lang-en="Hello! My name is Juan Melia.">Hola! Mi nombre es Juan Melia.</h1>
                 <br>
-                <h2 class="text-justify">Este es mi <b>portfolio digital</b>, <br> soy Diseñador y Desarrollador web
+                <h2 class="text-justify"
+                    data-lang-en="This is my <b>digital portfolio</b>, <br> I am a Designer and Web Developer.">Este es
+                    mi <b>portfolio digital</b>, <br> soy Diseñador y Desarrollador web
                     front-end.</h2>
 
                 <div class="home-socials pt-4 pb-4">
@@ -107,7 +123,7 @@
 
         <a href="#work" class="smooth-scroll">
             <div id="scroll-down">
-                <p>Mira mis trabajos</p>
+                <p data-lang-en="Check out my work">Mira mis trabajos</p>
                 <img src="imgs/icons/down-arrow.png">
             </div>
         </a>
@@ -208,7 +224,7 @@
                 <h6>Hogar Construcciones - Landing Page</h6>
             </div>
 
-          
+
 
 
 
@@ -242,8 +258,7 @@
             <!-- Marketing Work-Cards -->
 
             <div class="work-cards animate__animated" data-category="marketing">
-                <div class="work-cards-main"
-                    style="background-image: url('imgs/works/marketing/works-colgate.jpg');">
+                <div class="work-cards-main" style="background-image: url('imgs/works/marketing/works-colgate.jpg');">
                     <div class="work-cards-content">
                         <p>Trabajo final para materia de "Publicidad" en la Universidad de Palermo.</p>
                         <a target="_blank"
@@ -269,12 +284,10 @@
 
 
             <div class="work-cards animate__animated" data-category="marketing">
-                <div class="work-cards-main"
-                    style="background-image: url('imgs/works/marketing/works-enchastre.jpg');">
+                <div class="work-cards-main" style="background-image: url('imgs/works/marketing/works-enchastre.jpg');">
                     <div class="work-cards-content">
                         <p>Trabajo final para materia de "Comercialización II" en la Universidad de Palermo.</p>
-                        <a target="_blank"
-                            href="https://www.behance.net/gallery/207870403/Enchastre-Comercializacion">
+                        <a target="_blank" href="https://www.behance.net/gallery/207870403/Enchastre-Comercializacion">
                             <button>Ver Presentación</button></a>
                     </div>
                 </div>
@@ -283,7 +296,7 @@
 
 
 
-            
+
 
 
 

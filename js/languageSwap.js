@@ -1,75 +1,89 @@
-/* // Función para actualizar el URL sin recargar la página
-function updateUrlLanguage(lang) {
-  // Obtener la URL actual
-  const currentUrl = window.location.href;
+// Variable para rastrear si el cambio de idioma está en progreso
+let isChangingLanguage = false;
 
-  // Crear un objeto URL para modificar el parámetro
-  const url = new URL(currentUrl);
-  
-  // Actualizar o añadir el parámetro "lang"
-  url.searchParams.set('lang', lang);
-
-  // Usar history.pushState() para cambiar la URL sin recargar la página
-  window.history.pushState({}, '', url);
-}
- */
-
-
-// Función para cambiar el idioma y la clase de idioma seleccionado
-function setLanguage(lang) {
-// Actualizar el idioma
-if (lang === 'es') {
-  // Restaurar los textos originales desde el HTML (español por defecto)
-  document.getElementById("greetingText").textContent = originalTexts.greeting;
-  console.log(originalTexts.greeting)
-
-} else if (lang === 'en') {
-  // Cargar el archivo JSON de inglés
-  fetch('en.json')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("greetingText").textContent = data.greeting;
-
-    });
+// Función para obtener el valor de un parámetro de la URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
 }
 
+// Función para cambiar el idioma y actualizar el URL
+function setLanguage(lang, updateURL = true) {
+    // Si ya se está cambiando de idioma o el idioma ya está seleccionado, salir de la función
+    const currentLanguage = localStorage.getItem('selectedLanguage') || 'es';
+    if (isChangingLanguage || currentLanguage === lang) return;
 
+    // Establecer la variable para indicar que el cambio está en progreso
+    isChangingLanguage = true;
 
-// Guardar la selección de idioma en localStorage
-localStorage.setItem('selectedLanguage', lang);
+    // Mostrar el loader
+    showLoader();
 
-// Cambiar la clase para resaltar el idioma seleccionado
-const languageItems = document.querySelectorAll(".languages .language");
+    // Simular un pequeño retraso para ver el loader
+    setTimeout(() => {
+        // Obtener todos los elementos que tienen los atributos de traducción
+        const translatableElements = document.querySelectorAll("[data-lang-en]");
 
-languageItems.forEach(item => {
-  if (item.textContent === lang.toUpperCase()) {
-    item.classList.add("language-selected");
-  } else {
-    item.classList.remove("language-selected");
-  }
-});
+        // Recorrer los elementos y cambiar el texto según el idioma
+        translatableElements.forEach(element => {
+            if (lang === 'es') {
+                element.innerHTML = element.getAttribute('data-original') || element.innerHTML;
+            } else if (lang === 'en') {
+                element.setAttribute('data-original', element.innerHTML); // Guardar el texto original en data-original
+                element.innerHTML = element.getAttribute('data-lang-en');
+            }
+        });
 
-// Actualizar el URL sin recargar la página
-updateUrlLanguage(lang);
+        // Guardar la selección de idioma en localStorage
+        localStorage.setItem('selectedLanguage', lang);
+
+        // Aplicar la clase 'language-selected' según el idioma seleccionado
+        document.querySelectorAll('.language').forEach(element => {
+            element.classList.remove('language-selected');
+        });
+        document.querySelector(`.language[onclick="setLanguage('${lang}')"]`).classList.add('language-selected');
+
+        // Actualizar la URL si es necesario
+        if (updateURL) {
+            const newUrl = new URL(window.location);
+            newUrl.searchParams.set('lang', lang); // Cambiar o agregar el parámetro lang
+            window.history.replaceState({}, '', newUrl); // Reemplazar el estado actual con el nuevo URL
+        }
+
+        // Ocultar el loader una vez que se complete el cambio de idioma
+        hideLoader();
+        isChangingLanguage = false;
+    }, 500); // Simula un retraso de 0.5 segundos para mostrar el loader
 }
 
-// Verificar si hay un idioma guardado en localStorage o en la URL
+// Al cargar la página, leer el idioma del parámetro de la URL o de localStorage
 document.addEventListener('DOMContentLoaded', () => {
-// Primero, revisamos si hay un parámetro `lang` en la URL
-const urlLanguage = getUrlParameter('lang');
+    // Obtener el idioma de la URL si existe
+    const urlLanguage = getQueryParam('lang');
+    const savedLanguage = urlLanguage || localStorage.getItem('selectedLanguage') || 'es'; // Default 'es'
 
-if (urlLanguage) {
-  // Si existe el parámetro en la URL, usamos ese idioma
-  setLanguage(urlLanguage);
-} else {
-  // Si no, revisamos si hay un idioma guardado en localStorage
-  const savedLanguage = localStorage.getItem('selectedLanguage');
-  
-  if (savedLanguage) {
-    setLanguage(savedLanguage);
-  } else {
-    // Por defecto, cargamos el español
-    setLanguage('es');
-  }
-}
+    // Aplicar el idioma guardado o de la URL
+    setLanguage(savedLanguage, false); // El segundo parámetro evita que se actualice el URL al cargar la página
+
+    // Aplicar la clase 'language-selected' al cargar la página
+    document.querySelectorAll('.language').forEach(element => {
+        element.classList.remove('language-selected');
+    });
+    
+    if (savedLanguage === 'es') {
+        document.querySelector('.language[onclick="setLanguage(\'es\')"]').classList.add('language-selected');
+    } else if (savedLanguage === 'en') {
+        document.querySelector('.language[onclick="setLanguage(\'en\')"]').classList.add('language-selected');
+    }
 });
+
+// Funciones de Loader (ejemplo simple)
+function showLoader() {
+    document.getElementById('loader').style.display = 'block';
+    document.body.classList.add('loaderBodyHide');
+}
+
+function hideLoader() {
+    document.getElementById('loader').style.display = 'none';
+    document.body.classList.remove('loaderBodyHide');
+}

@@ -33,25 +33,37 @@
 
 </head>
 
-<body>
+<div id="loader" style="display: none;">
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</div>
+
+
+<body id="body">
+
 
     <section id="sobreMi">
 
         <nav class="navBar">
 
-            <a href="#contact" class="nav-sides contactameButton p-4 smooth-scroll">Contactame</a>
+            <a href="index.html#contact" class="nav-sides contactameButton p-4 smooth-scroll"
+                data-lang-en="Contact me">Contactame</a>
 
             <ul class="home-nav">
-                <li><a href="index.html">Inicio</a> </li>
-                <li><a href="sobreMi.html">Sobre Mí</a> </li>
-                <li><a href="JuanMelia-CV.pdf" target="_blank">Resumen</a></li>
+                <li><a href="index.html" data-lang-en="Home">Inicio</a> </li>
+                <li><a href="sobreMi.html" data-lang-en="About me">Sobre Mí</a> </li>
+                <li><a href="JuanMelia-CV.pdf" target="_blank" data-lang-en="Resume">Resumen</a></li>
             </ul>
 
             <div class="nav-sides p-4 items-center">
                 <ul class="languages d-flex ">
-                    <li class="language language-selected" onclick="setLanguage('es')">ES</li>
+                    <li class="language" onclick="setLanguage('es')">ES</li>
                     <p>/</p>
-                    <li class="language " onclick="setLanguage('en')">EN</li>
+                    <li class="language" onclick="setLanguage('en')">EN</li>
                 </ul>
 
             </div>
@@ -59,7 +71,7 @@
         </nav>
 
 
-        <div class="home-mainContainer ">
+        <div id="home-mainContainer">
 
             <div class="avatar">
                 <img src="imgs/avatar.png" alt="Juan Melia - Desarrollador y Diseñador Portfolio Imagen de perfil">
@@ -81,7 +93,7 @@
 
                 <div class="sobreMi-bio">
 
-                    <h1 class="text-justify">Hola! Mi nombre es Juan Melia.</h1>
+                    <h1 class="text-justify" data-lang-en="Hello! My name is Juan Melia.">Hola! Mi nombre es Juan Melia.</h1>
                     <br>
 
 
