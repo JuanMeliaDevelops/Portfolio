@@ -9,6 +9,8 @@ function getQueryParam(param) {
 
 // Función para cambiar el idioma y actualizar el URL
 function setLanguage(lang, updateURL = true) {
+    console.log(`Cambiando a idioma: ${lang}`);  // Depuración para ver el idioma
+
     // Si ya se está cambiando de idioma o el idioma ya está seleccionado, salir de la función
     const currentLanguage = localStorage.getItem('selectedLanguage') || 'es';
     if (isChangingLanguage || currentLanguage === lang) return;
@@ -19,7 +21,6 @@ function setLanguage(lang, updateURL = true) {
     // Mostrar el loader
     showLoader();
 
-    // Simular un pequeño retraso para ver el loader
     setTimeout(() => {
         // Obtener todos los elementos que tienen los atributos de traducción
         const translatableElements = document.querySelectorAll("[data-lang-en]");
@@ -46,8 +47,8 @@ function setLanguage(lang, updateURL = true) {
         // Actualizar la URL si es necesario
         if (updateURL) {
             const newUrl = new URL(window.location);
-            newUrl.searchParams.set('lang', lang); // Cambiar o agregar el parámetro lang
-            window.history.replaceState({}, '', newUrl); // Reemplazar el estado actual con el nuevo URL
+            newUrl.searchParams.set('lang', lang);
+            window.history.pushState({}, '', newUrl);  // Usar pushState en lugar de forzar recarga
         }
 
         // Ocultar el loader una vez que se complete el cambio de idioma
@@ -56,11 +57,20 @@ function setLanguage(lang, updateURL = true) {
     }, 500); // Simula un retraso de 0.5 segundos para mostrar el loader
 }
 
-// Al cargar la página, leer el idioma del parámetro de la URL o de localStorage
+// Redirigir a la URL con el idioma si no tiene el parámetro "lang"
 document.addEventListener('DOMContentLoaded', () => {
     // Obtener el idioma de la URL si existe
     const urlLanguage = getQueryParam('lang');
     const savedLanguage = urlLanguage || localStorage.getItem('selectedLanguage') || 'es'; // Default 'es'
+
+    // Redirigir a la URL con el idioma si falta el parámetro 'lang'
+    if (!urlLanguage) {
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set('lang', savedLanguage);
+        window.history.replaceState({}, '', newUrl);  // Usamos replaceState para que no recargue la página
+    }
+
+    console.log(`Idioma en la URL: ${urlLanguage}, Idioma guardado: ${savedLanguage}`);
 
     // Aplicar el idioma guardado o de la URL
     setLanguage(savedLanguage, false); // El segundo parámetro evita que se actualice el URL al cargar la página
@@ -69,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.language').forEach(element => {
         element.classList.remove('language-selected');
     });
-    
+
     if (savedLanguage === 'es') {
         document.querySelector('.language[onclick="setLanguage(\'es\')"]').classList.add('language-selected');
     } else if (savedLanguage === 'en') {
