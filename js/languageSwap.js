@@ -1,6 +1,20 @@
 // Variable para rastrear si el cambio de idioma está en progreso
 let isChangingLanguage = false;
 
+// -Loader
+// Función para mostrar el loader
+function showLoader() {
+    document.getElementById('loader').style.display = 'block';
+    document.body.classList.add('loaderBodyHide');
+}
+
+// Función para ocultar el loader
+function hideLoader() {
+    document.getElementById('loader').style.display = 'none';
+    document.body.classList.remove('loaderBodyHide');  
+}
+
+// -Language Swap
 // Función para cambiar el idioma
 function setLanguage(lang) {
     // Si ya se está cambiando de idioma o el idioma ya está seleccionado, salir de la función
@@ -10,8 +24,7 @@ function setLanguage(lang) {
     // Establecer la variable para indicar que el cambio está en progreso
     isChangingLanguage = true;
 
-    // Mostrar el loader
-    showLoader();
+    showLoader(); // Mostrar el loader cuando se inicia el cambio de idioma
 
     setTimeout(() => {
         // Obtener todos los elementos que tienen los atributos de traducción
@@ -20,8 +33,10 @@ function setLanguage(lang) {
         // Recorrer los elementos y cambiar el texto según el idioma
         translatableElements.forEach(element => {
             if (lang === 'es') {
+                // Restaurar el texto original del HTML para el español
                 element.innerHTML = element.getAttribute('data-original') || element.innerHTML;
             } else if (lang === 'en') {
+                // Usar la traducción en inglés
                 element.setAttribute('data-original', element.innerHTML); // Guardar el texto original en data-original
                 element.innerHTML = element.getAttribute('data-lang-en');
             }
@@ -35,46 +50,45 @@ function setLanguage(lang) {
             element.classList.remove('language-selected');
         });
 
-        // Agregar la clase 'language-selected' al idioma seleccionado
-        document.querySelector(`.language[onclick="setLanguage('${lang}')"]`).classList.add('language-selected');
+        // Agregar 'language-selected' al idioma seleccionado
+        if (lang === 'es') {
+            document.querySelector('.language[onclick="setLanguage(\'es\')"]').classList.add('language-selected');
+        } else if (lang === 'en') {
+            document.querySelector('.language[onclick="setLanguage(\'en\')"]').classList.add('language-selected');
+        }
 
-        // Ocultar el loader una vez que se complete el cambio de idioma
-        hideLoader();
+        hideLoader(); // Ocultar el loader una vez que se complete el cambio de idioma
+
+        // Indicar que el cambio de idioma ha finalizado
         isChangingLanguage = false;
-    }, 500); // Simula un retraso de 0.5 segundos para mostrar el loader
+    }, 500); // Reducir el retraso para mejorar la experiencia de usuario
 }
 
-// Al cargar la página, leer el idioma del localStorage
+// Comprobar el idioma almacenado en localStorage al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    // Obtener el idioma guardado en localStorage o usar "es" como predeterminado
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es'; 
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es'; // Idioma por defecto 'es'
 
-    // Verificar si se ha guardado correctamente el idioma en el localStorage
-    console.log('Idioma guardado en localStorage:', savedLanguage);
-
-    // Aplicar el idioma guardado
-    setLanguage(savedLanguage);
-
-    // Aplicar la clase 'language-selected' al cargar la página
+    // Aplicar la clase 'language-selected' al idioma seleccionado
     document.querySelectorAll('.language').forEach(element => {
         element.classList.remove('language-selected');
     });
-
-    // Asegurarse de que el elemento correcto tenga la clase 'language-selected'
+    
     if (savedLanguage === 'es') {
         document.querySelector('.language[onclick="setLanguage(\'es\')"]').classList.add('language-selected');
     } else if (savedLanguage === 'en') {
         document.querySelector('.language[onclick="setLanguage(\'en\')"]').classList.add('language-selected');
     }
+
+    // Aplicar el idioma guardado al cargar la página sin recargar innecesariamente
+    const translatableElements = document.querySelectorAll("[data-lang-en]");
+    translatableElements.forEach(element => {
+        if (savedLanguage === 'es') {
+            // Restaurar el texto original del HTML para el español
+            element.innerHTML = element.getAttribute('data-original') || element.innerHTML;
+        } else if (savedLanguage === 'en') {
+            // Usar la traducción en inglés
+            element.setAttribute('data-original', element.innerHTML); // Guardar el texto original en data-original
+            element.innerHTML = element.getAttribute('data-lang-en');
+        }
+    });
 });
-
-// Funciones de Loader (ejemplo simple)
-function showLoader() {
-    document.getElementById('loader').style.display = 'block';
-    document.body.classList.add('loaderBodyHide');
-}
-
-function hideLoader() {
-    document.getElementById('loader').style.display = 'none';
-    document.body.classList.remove('loaderBodyHide');
-}
