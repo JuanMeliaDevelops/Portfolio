@@ -30,6 +30,9 @@ function setLanguage(lang) {
         // Obtener todos los elementos que tienen los atributos de traducción
         const translatableElements = document.querySelectorAll("[data-lang-en]");
 
+        // Cambiar el archivo de CV según el idioma seleccionado usando una clase o atributo común
+        updateCVLinks(lang);
+
         // Recorrer los elementos y cambiar el texto según el idioma
         translatableElements.forEach(element => {
             if (lang === 'es') {
@@ -51,17 +54,26 @@ function setLanguage(lang) {
         });
 
         // Agregar 'language-selected' al idioma seleccionado
-        if (lang === 'es') {
-            document.querySelector('.language[onclick="setLanguage(\'es\')"]').classList.add('language-selected');
-        } else if (lang === 'en') {
-            document.querySelector('.language[onclick="setLanguage(\'en\')"]').classList.add('language-selected');
-        }
+        document.querySelector(`.language[onclick="setLanguage('${lang}')"]`).classList.add('language-selected');
 
         hideLoader(); // Ocultar el loader una vez que se complete el cambio de idioma
 
         // Indicar que el cambio de idioma ha finalizado
         isChangingLanguage = false;
     }, 500); // Reducir el retraso para mejorar la experiencia de usuario
+}
+
+// Función para actualizar los enlaces de CV según el idioma seleccionado
+function updateCVLinks(lang) {
+    const downloadLinks = document.querySelectorAll('.cv');  // Selecciona todos los elementos con la clase 'cv'
+
+    downloadLinks.forEach(downloadLink => {  // Recorrer todos los links de CV
+        if (lang === 'en') {
+            downloadLink.href = 'cv/JuanMelia-CV-en.pdf';  // Cambiar a la ruta del CV en inglés
+        } else if (lang === 'es') {
+            downloadLink.href = 'cv/JuanMelia-CV-es.pdf';  // Cambiar a la ruta del CV en español
+        }
+    });
 }
 
 // Comprobar el idioma almacenado en localStorage al cargar la página
@@ -73,11 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.remove('language-selected');
     });
     
-    if (savedLanguage === 'es') {
-        document.querySelector('.language[onclick="setLanguage(\'es\')"]').classList.add('language-selected');
-    } else if (savedLanguage === 'en') {
-        document.querySelector('.language[onclick="setLanguage(\'en\')"]').classList.add('language-selected');
-    }
+    document.querySelector(`.language[onclick="setLanguage('${savedLanguage}')"]`).classList.add('language-selected');
 
     // Aplicar el idioma guardado al cargar la página sin recargar innecesariamente
     const translatableElements = document.querySelectorAll("[data-lang-en]");
@@ -91,4 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             element.innerHTML = element.getAttribute('data-lang-en');
         }
     });
+
+    // Asegurarse de que los enlaces de CV también se actualicen
+    updateCVLinks(savedLanguage);
 });
