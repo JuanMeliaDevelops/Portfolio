@@ -46,7 +46,11 @@ function setLanguage(lang) {
 
 // Al cargar la página, leer el idioma del localStorage
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es'; // Default 'es'
+    // Obtener el idioma guardado en localStorage o usar "es" como predeterminado
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es'; 
+
+    // Verificar si se ha guardado correctamente el idioma en el localStorage
+    console.log('Idioma guardado en localStorage:', savedLanguage);
 
     // Aplicar el idioma guardado
     setLanguage(savedLanguage);
@@ -56,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.remove('language-selected');
     });
 
-    // Asegúrate de que el elemento correcto tenga la clase 'language-selected'
+    // Asegurarse de que el elemento correcto tenga la clase 'language-selected'
     if (savedLanguage === 'es') {
         document.querySelector('.language[onclick="setLanguage(\'es\')"]').classList.add('language-selected');
     } else if (savedLanguage === 'en') {
