@@ -1,14 +1,8 @@
 // Variable para rastrear si el cambio de idioma está en progreso
 let isChangingLanguage = false;
 
-// Función para obtener el valor de un parámetro de la URL
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
-
-// Función para cambiar el idioma y actualizar el URL
-function setLanguage(lang, updateURL = true) {
+// Función para cambiar el idioma
+function setLanguage(lang) {
     // Si ya se está cambiando de idioma o el idioma ya está seleccionado, salir de la función
     const currentLanguage = localStorage.getItem('selectedLanguage') || 'es';
     if (isChangingLanguage || currentLanguage === lang) return;
@@ -40,14 +34,9 @@ function setLanguage(lang, updateURL = true) {
         document.querySelectorAll('.language').forEach(element => {
             element.classList.remove('language-selected');
         });
-        document.querySelector(`.language[onclick="setLanguage('${lang}')"]`).classList.add('language-selected');
 
-        // Actualizar la URL si es necesario
-        if (updateURL) {
-            const newUrl = new URL(window.location);
-            newUrl.searchParams.set('lang', lang);
-            window.history.pushState({}, '', newUrl); // Usar pushState en lugar de forzar recarga
-        }
+        // Agregar la clase 'language-selected' al idioma seleccionado
+        document.querySelector(`.language[onclick="setLanguage('${lang}')"]`).classList.add('language-selected');
 
         // Ocultar el loader una vez que se complete el cambio de idioma
         hideLoader();
@@ -55,22 +44,19 @@ function setLanguage(lang, updateURL = true) {
     }, 500); // Simula un retraso de 0.5 segundos para mostrar el loader
 }
 
-// Redirigir a la URL con el idioma si no tiene el parámetro "lang"
+// Al cargar la página, leer el idioma del localStorage
 document.addEventListener('DOMContentLoaded', () => {
-    // Obtener el idioma de la URL si existe
-    const urlLanguage = getQueryParam('lang');
-    const savedLanguage = urlLanguage || localStorage.getItem('selectedLanguage') || 'es'; // Default 'es'
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es'; // Default 'es'
 
-    // Aplicar el idioma guardado o de la URL
-    if (savedLanguage !== (localStorage.getItem('selectedLanguage') || 'es')) {
-        setLanguage(savedLanguage, false); // El segundo parámetro evita que se actualice el URL al cargar la página
-    }
+    // Aplicar el idioma guardado
+    setLanguage(savedLanguage);
 
     // Aplicar la clase 'language-selected' al cargar la página
     document.querySelectorAll('.language').forEach(element => {
         element.classList.remove('language-selected');
     });
-    
+
+    // Asegúrate de que el elemento correcto tenga la clase 'language-selected'
     if (savedLanguage === 'es') {
         document.querySelector('.language[onclick="setLanguage(\'es\')"]').classList.add('language-selected');
     } else if (savedLanguage === 'en') {
