@@ -295,9 +295,7 @@ body {
   border: 2px solid whitesmoke;
   border-radius: 20px;
   margin: 4%;
-  padding-right: 2%;
-  padding-left: 2%;
-  width: 10%;
+  padding: 0 2%;
   height: 8%;
   font-weight: 600;
   font-size: 1.2rem;
@@ -551,6 +549,7 @@ textarea {
   background-color: black;
   border: 2px solid black;
   border-radius: 20px;
+
 }
 
 #contact form button:hover {
@@ -720,115 +719,12 @@ footer {
 /* Responsive */
 
 /* Tablet */
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .navBar {
-    height: 10vh;
-  }
 
-  .home-nav li {
-    width: 12vw;
-  }
-
-  .avatar {
-    width: 250px;
-    height: 30vh;
-  }
-
-  .home-info {
-    width: 40%;
-  }
-
-  .home-info h1 {
-    font-size: 1.8rem;
-  }
-
-  .home-info h2 {
-    font-size: 1.2rem;
-  }
-
-  .work-cards {
-    width: 80%;
-  }
-
-  .container-form {
-    width: 50%;
-  }
 }
 
 /* Mobile */
-
 @media screen and (max-width: 767px) {
-  .navBar {
-    flex-direction: column;
-    height: auto;
-    padding-top: 4%;
-  }
+ 
 
-  .home-nav {
-    width: 100%;
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-  }
-
-  .home-nav li {
-    width: auto;
-    margin-top: 2%;
-  }
-
-  .avatar {
-    width: 180px;
-    height: 20vh;
-  }
-
-  .home-info {
-    width: 90%;
-  }
-
-  .home-info h1 {
-    font-size: 1.4rem;
-  }
-
-  .home-info h2 {
-    font-size: 1rem;
-  }
-
-  .home-btn {
-    width: 60%;
-    height: auto;
-  }
-
-  .work-cards {
-    width: 90%;
-    margin: 5% 0;
-  }
-
-  .work-cards h6 {
-    font-size: 1rem;
-  }
-
-  .work-cards-content p {
-    font-size: 0.9rem;
-  }
-
-  .container-form {
-    width: 90%;
-  }
-
-  .contact-socials {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    padding-top: 10px;
-  }
-
-  .footer-label,
-  .footer-socials,
-  .footer-links {
-    width: 100%;
-  }
 }
