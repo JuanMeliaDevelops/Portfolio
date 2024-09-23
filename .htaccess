@@ -2,7 +2,10 @@ RewriteEngine On
 
 # Redirigir solicitudes de .html a la URL sin la extensión
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html\s [NC]
-RewriteRule ^ %1 [R=301,L]
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Redirigir index.php o index.html a la raíz
+RewriteRule ^index\.html?$ / [R=301,L]
 
 # Permitir URLs limpias sin la extensión .html
 RewriteCond %{REQUEST_FILENAME}.html -f
