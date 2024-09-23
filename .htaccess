@@ -1,11 +1,15 @@
 RewriteEngine On
 
+# Redirigir index.html o index.php a la raíz sin mostrar "index"
+RewriteRule ^index\.html?$ / [R=301,L]
+RewriteRule ^index\.php?$ / [R=301,L]
+
+# Redirigir cualquier solicitud de "index" a la raíz
+RewriteRule ^index/?$ / [R=301,L]
+
 # Redirigir solicitudes de .html a la URL sin la extensión
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html\s [NC]
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-
-# Redirigir index.php o index.html a la raíz
-RewriteRule ^index\.html?$ / [R=301,L]
 
 # Permitir URLs limpias sin la extensión .html
 RewriteCond %{REQUEST_FILENAME}.html -f
