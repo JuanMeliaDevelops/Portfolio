@@ -29,19 +29,28 @@ function setLanguage(lang) {
   setTimeout(() => {
     // Obtener todos los elementos que tienen los atributos de traducción
     const translatableElements = document.querySelectorAll("[data-lang-en]");
-
+    
     // Cambiar el archivo de CV según el idioma seleccionado usando una clase o atributo común
     updateCVLinks(lang);
 
-    // Recorrer los elementos y cambiar el texto según el idioma
+    // Recorrer los elementos y cambiar el texto o placeholder según el idioma
     translatableElements.forEach(element => {
       if (lang === 'es') {
-        // Restaurar el texto original del HTML para el español
-        element.innerHTML = element.getAttribute('data-original') || element.innerHTML;
+        // Restaurar el texto o placeholder original para español
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+          element.placeholder = element.getAttribute('data-original') || element.placeholder;
+        } else {
+          element.innerHTML = element.getAttribute('data-original') || element.innerHTML;
+        }
       } else if (lang === 'en') {
-        // Usar la traducción en inglés
-        element.setAttribute('data-original', element.innerHTML); // Guardar el texto original en data-original
-        element.innerHTML = element.getAttribute('data-lang-en');
+        // Guardar el texto o placeholder original en data-original
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+          element.setAttribute('data-original', element.placeholder); // Guardar el placeholder original
+          element.placeholder = element.getAttribute('data-lang-en'); // Cambiar al placeholder en inglés
+        } else {
+          element.setAttribute('data-original', element.innerHTML); // Guardar el texto original
+          element.innerHTML = element.getAttribute('data-lang-en'); // Cambiar al texto en inglés
+        }
       }
     });
 
@@ -65,13 +74,13 @@ function setLanguage(lang) {
 
 // Función para actualizar los enlaces de CV según el idioma seleccionado
 function updateCVLinks(lang) {
-  const downloadLinks = document.querySelectorAll('.cv');  // Selecciona todos los elementos con la clase 'cv'
+  const downloadLinks = document.querySelectorAll('.cv'); // Selecciona todos los elementos con la clase 'cv'
 
-  downloadLinks.forEach(downloadLink => {  // Recorrer todos los links de CV
+  downloadLinks.forEach(downloadLink => { // Recorrer todos los links de CV
     if (lang === 'en') {
-      downloadLink.href = 'cv/JuanMelia-CV-en.pdf';  // Cambiar a la ruta del CV en inglés
+      downloadLink.href = 'cv/JuanMelia-CV-en.pdf'; // Cambiar a la ruta del CV en inglés
     } else if (lang === 'es') {
-      downloadLink.href = 'cv/JuanMelia-CV-es.pdf';  // Cambiar a la ruta del CV en español
+      downloadLink.href = 'cv/JuanMelia-CV-es.pdf'; // Cambiar a la ruta del CV en español
     }
   });
 }
@@ -91,12 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const translatableElements = document.querySelectorAll("[data-lang-en]");
   translatableElements.forEach(element => {
     if (savedLanguage === 'es') {
-      // Restaurar el texto original del HTML para el español
-      element.innerHTML = element.getAttribute('data-original') || element.innerHTML;
+      // Restaurar el texto o placeholder original para español
+      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+        element.placeholder = element.getAttribute('data-original') || element.placeholder;
+      } else {
+        element.innerHTML = element.getAttribute('data-original') || element.innerHTML;
+      }
     } else if (savedLanguage === 'en') {
       // Usar la traducción en inglés
-      element.setAttribute('data-original', element.innerHTML); // Guardar el texto original en data-original
-      element.innerHTML = element.getAttribute('data-lang-en');
+      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+        element.setAttribute('data-original', element.placeholder); // Guardar el placeholder original
+        element.placeholder = element.getAttribute('data-lang-en'); // Cambiar al placeholder en inglés
+      } else {
+        element.setAttribute('data-original', element.innerHTML); // Guardar el texto original
+        element.innerHTML = element.getAttribute('data-lang-en');
+      }
     }
   });
 
