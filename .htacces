@@ -1,3 +1,9 @@
 RewriteEngine On
+
+# Redirigir solicitudes de .html a la URL sin la extensión
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html\s [NC]
 RewriteRule ^ %1 [R=301,L]
+
+# Permitir URLs limpias sin la extensión .html
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
