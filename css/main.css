@@ -207,7 +207,7 @@ body {
 }
 
 .avatar {
-  width: 330px;
+  width: 300px;
   height: 42vh;
 }
 
@@ -829,6 +829,7 @@ footer {
 }
 
 .container-datos{
+  height: 40vh;
   width: 90%;
 }
 
