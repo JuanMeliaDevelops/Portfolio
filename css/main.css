@@ -819,6 +819,7 @@ footer {
 /* Contact */
 #contact h4{
   padding: 5% 0;
+  height: 8vh;
 }
 .container-contact{
   align-items: start;
@@ -830,7 +831,6 @@ footer {
 }
 
 .container-datos{
-
   width: 90%;
 }
 
