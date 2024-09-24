@@ -490,7 +490,8 @@ body {
 }
 
 .container-form {
-  padding: 2%;
+  padding: 2% 0 0 0;
+  margin: 0;
   width: 30%;
   background-color: whitesmoke;
   justify-content: center;
@@ -804,6 +805,7 @@ footer {
 }
 
 .container-datos{
+  height: auto;
   width: 90%;
 }
 
@@ -812,7 +814,7 @@ footer {
   width: 80%;
 }
 #contact form button{
-  width: 25vw;
+  width: 40vw;
 }
 
 #msgSubmit{
