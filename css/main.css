@@ -384,6 +384,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .work-cards-content button {
@@ -773,7 +774,6 @@ footer {
 
 
 #work ul li{
-
  width: 40%;
 }
 
@@ -789,6 +789,19 @@ footer {
 
 .work-cards-main{
   height: 30vh;
+}
+
+.work-cards-content p{
+  color: #262320;
+  width: 85%;
+  font-weight: 600;
+
+}
+.work-cards-content button{
+  color: #262320;
+  border: 2px solid #262320;
+  font-size: 0.9rem;
+  width: 35vw;
 }
 
 /* Contact */
@@ -815,6 +828,7 @@ footer {
 }
 #contact form button{
   width: 40vw;
+  height: 10vw;
 }
 
 #msgSubmit{
