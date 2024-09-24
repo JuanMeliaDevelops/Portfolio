@@ -734,9 +734,7 @@ footer {
 
 /* Home */
 
-#home{
-  height: 95vh;
-}
+
   #home-maincontainer{
     flex-direction: column;
   }
@@ -759,7 +757,7 @@ footer {
 
  #scroll-down{
   width: 35vw;
-  bottom: 50;
+
 
  }
 
@@ -824,7 +822,8 @@ footer {
 /* FOOTER */
 
 .footer-container {
-  margin: 15% auto;
+  margin: 25% auto 0 auto;
+  padding-top: 10% ;
   flex-direction: column;
   text-align: center;
   width: 80%;
