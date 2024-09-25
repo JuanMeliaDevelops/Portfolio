@@ -2,18 +2,18 @@
 
 <head>
 
-    
+
     <title>Porfolio - Juan Melia</title>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5NZPCWP5F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5NZPCWP5F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-J5NZPCWP5F');
-</script>
+        gtag('config', 'G-J5NZPCWP5F');
+    </script>
 
 
     <!-- css -->
@@ -80,26 +80,45 @@
 
             <a href="#contact" class="nav-sides contactameButton p-4 smooth-scroll"
                 data-lang-en="Contact me">Contactame</a>
-
+        
             <ul class="home-nav">
-                <li><a href="index.html" data-lang-en="Home">Inicio</a> </li>
-                <li><a href="sobreMi.html" data-lang-en="About me">Sobre Mí</a> </li>
-                <li><a class="cv" href="cv\JuanMelia-CV-es.pdf" target="_blank" data-lang-en="Resume">Resumen</a></li>
+                <li><a href="index.html" data-lang-en="Home">Inicio</a></li>
+                <li><a href="sobreMi.html" data-lang-en="About me">Sobre Mí</a></li>
+                <li><a class="cv" href="cv/JuanMelia-CV-es.pdf" target="_blank" data-lang-en="Resume">Resumen</a></li>
             </ul>
-
+        
             <div class="nav-sides p-4 items-center">
-                <ul class="languages d-flex ">
+                <ul class="languages d-flex">
                     <li class="language" onclick="setLanguage('es')">ES</li>
                     <p>/</p>
                     <li class="language" onclick="setLanguage('en')">EN</li>
                 </ul>
-
             </div>
-
-
-
+        
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        
+            <div id="mobileNav" class="mobile-nav">
+                <ul>
+                    <li><a href="index.html" data-lang-en="Home">Inicio</a></li>
+                    <li><a href="sobreMi.html" data-lang-en="About me">Sobre Mí</a></li>
+                    <li><a href="cv/JuanMelia-CV-es.pdf" target="_blank" data-lang-en="Resume">Resumen</a></li>
+                    <li><a href="#contact" class="smooth-scroll" data-lang-en="Contact me">Contactame</a></li>
+                </ul>
+        
+                <div>
+                    <ul class="languages d-flex">
+                        <li class="language" onclick="setLanguage('es')">ES</li>
+                        <p>/</p>
+                        <li class="language" onclick="setLanguage('en')">EN</li>
+                    </ul>
+                </div>
+            </div>
+        
         </nav>
-
 
         <div id="home-mainContainer">
 
@@ -170,8 +189,7 @@
             <!-- Destacados Work-Cards -->
 
             <div class="work-cards animate__animated" data-category="desarrollo destacado">
-                <a target="_blank"
-                href="https://juanmeliadevelops.github.io/Coinverter/"></a>
+                <a target="_blank" href="https://juanmeliadevelops.github.io/Coinverter/"></a>
                 <div class="work-cards-main"
                     style="background-image: url('imgs/works/desarrollo/work-coinverter.jpg');">
                     <div class="work-cards-content">
@@ -198,32 +216,31 @@
 
             <div class="work-cards animate__animated" data-category="diseño destacado">
                 <a target="_blank"
-                   href="https://www.figma.com/proto/nWbzos2GsM3yF8FmS6D22y/Dise%C3%B1o-interfaz-cajero-banco?type=design&node-id=206-71&t=UTNU0aQ42zcrG1x7-8&scaling=scale-down&page-id=0%3A1&starting-point-node-id=16%3A4&hide-ui=1"></a>
+                    href="https://www.figma.com/proto/nWbzos2GsM3yF8FmS6D22y/Dise%C3%B1o-interfaz-cajero-banco?type=design&node-id=206-71&t=UTNU0aQ42zcrG1x7-8&scaling=scale-down&page-id=0%3A1&starting-point-node-id=16%3A4&hide-ui=1"></a>
                 <div class="work-cards-main" style="background-image: url('imgs/works/diseño/work-banelco.jpg');">
-                  <div class="work-cards-content">
-                    <p>Trabajo final para "Ergonomia I" en la Universdad de Palermo. <br>
-                      Diseño UX/UI de interfaz Banelco para realizar depositos bancarios.</p>
-                    <div>
-                      <a target="_blank"
-                         href="https://www.figma.com/proto/nWbzos2GsM3yF8FmS6D22y/Dise%C3%B1o-interfaz-cajero-banco?type=design&node-id=206-71&t=UTNU0aQ42zcrG1x7-8&scaling=scale-down&page-id=0%3A1&starting-point-node-id=16%3A4&hide-ui=1">
-                        <button>Ver Prototipo</button></a>
-                      <a target="_blank"
-                         href="https://www.behance.net/gallery/188618437/Rediseno-de-Interfaz-Cajero-Banelco-Deposito-Bancario/modules/1066587007">
-                        <button>Ver Presentación</button></a>
+                    <div class="work-cards-content">
+                        <p>Trabajo final para "Ergonomia I" en la Universdad de Palermo. <br>
+                            Diseño UX/UI de interfaz Banelco para realizar depositos bancarios.</p>
+                        <div>
+                            <a target="_blank"
+                                href="https://www.figma.com/proto/nWbzos2GsM3yF8FmS6D22y/Dise%C3%B1o-interfaz-cajero-banco?type=design&node-id=206-71&t=UTNU0aQ42zcrG1x7-8&scaling=scale-down&page-id=0%3A1&starting-point-node-id=16%3A4&hide-ui=1">
+                                <button>Ver Prototipo</button></a>
+                            <a target="_blank"
+                                href="https://www.behance.net/gallery/188618437/Rediseno-de-Interfaz-Cajero-Banelco-Deposito-Bancario/modules/1066587007">
+                                <button>Ver Presentación</button></a>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <h6>Rediseño de interfaz Cajero Banelco - UX/UI</h6>
-              </div>
-              
+            </div>
+
 
 
 
             <!-- Desarrollo Work-Cards -->
 
             <div class="work-cards animate__animated" data-category="desarrollo destacado">
-                <a target="_blank"
-                href="https://www.solariega.com.ar/"></a>
+                <a target="_blank" href="https://www.solariega.com.ar/"></a>
                 <div class="work-cards-main" style="background-image: url('imgs/works/desarrollo/work-solariega.jpg');">
                     <div class="work-cards-content">
                         <p>Diseño y desarrollo de Landing Page para Solariega instituto geriatrico.</p>
@@ -234,8 +251,7 @@
             </div>
 
             <div class="work-cards animate__animated" data-category="desarrollo ">
-                <a target="_blank"
-                href="https://juanmeliadevelops.github.io/diagnosticoBuenosAires/"></a>
+                <a target="_blank" href="https://juanmeliadevelops.github.io/diagnosticoBuenosAires/"></a>
                 <div class="work-cards-main"
                     style="background-image: url('imgs/works/desarrollo/work-diagnosticobsas.jpg');">
                     <div class="work-cards-content">
@@ -248,8 +264,7 @@
             </div>
 
             <div class="work-cards animate__animated" data-category="desarrollo ">
-                <a target="_blank"
-                href="https://juanmeliadevelops.github.io/hcsa/"></a>
+                <a target="_blank" href="https://juanmeliadevelops.github.io/hcsa/"></a>
                 <div class="work-cards-main" style="background-image: url('imgs/works/desarrollo/work-hcsa.jpg');">
                     <div class="work-cards-content">
                         <p>Diseño y desarrollo de Landing Page para Hogar Construcciones.</p>
@@ -269,7 +284,7 @@
 
             <div class="work-cards animate__animated" data-category="diseño destacado">
                 <a target="_blank"
-                href="https://www.figma.com/proto/eJztLEna0YfUboXNtRku6q/Costube?type=design&t=AEyN7wFzvhlC6QdC-8&scaling=min-zoom&page-id=0%3A1&node-id=2-970&starting-point-node-id=2%3A970&hide-ui=1"></a>
+                    href="https://www.figma.com/proto/eJztLEna0YfUboXNtRku6q/Costube?type=design&t=AEyN7wFzvhlC6QdC-8&scaling=min-zoom&page-id=0%3A1&node-id=2-970&starting-point-node-id=2%3A970&hide-ui=1"></a>
                 <div class="work-cards-main" style="background-image: url('imgs/works/diseño/work-costube.jpg');">
                     <div class="work-cards-content">
                         <p>Trabajo final Diseño UX/UI en Coderhouse.<br>
@@ -293,7 +308,7 @@
 
             <div class="work-cards animate__animated" data-category="diseño">
                 <a target="_blank"
-                href="https://www.behance.net/gallery/208387365/Diseno-de-Semaforo-para-Bicisendas"></a>
+                    href="https://www.behance.net/gallery/208387365/Diseno-de-Semaforo-para-Bicisendas"></a>
                 <div class="work-cards-main" style="background-image: url('imgs/works/diseño/work-semaforo.jpg');">
                     <div class="work-cards-content">
                         <p>Diseño de semaforo para bicisendas. <br>
@@ -311,8 +326,7 @@
             </div>
 
             <div class="work-cards animate__animated" data-category="diseño">
-                <a target="_blank"
-                href="https://www.behance.net/gallery/208386003/Dune-Chair-Concept-Design"></a>
+                <a target="_blank" href="https://www.behance.net/gallery/208386003/Dune-Chair-Concept-Design"></a>
                 <div class="work-cards-main" style="background-image: url('imgs/works/diseño/work-duneChair.jpg');">
                     <div class="work-cards-content">
                         <p>Diseño conceptual de prototipos de sillas ambientado en la pelicula Dune.<br>
@@ -338,7 +352,7 @@
 
             <div class="work-cards animate__animated" data-category="marketing">
                 <a target="_blank"
-                href="https://www.behance.net/gallery/207870889/Colgate-Everywhere-by-Publicity-Crew"></a>
+                    href="https://www.behance.net/gallery/207870889/Colgate-Everywhere-by-Publicity-Crew"></a>
                 <div class="work-cards-main" style="background-image: url('imgs/works/marketing/works-colgate.jpg');">
                     <div class="work-cards-content">
                         <p>Trabajo final para materia de "Publicidad" en la Universidad de Palermo.</p>
@@ -352,7 +366,7 @@
 
             <div class="work-cards animate__animated" data-category="marketing">
                 <a target="_blank"
-                href="https://docs.google.com/presentation/d/16Z1AVyG7g4X0bvB_Byk893kkDECzFC-pytHkhHk0kEU/edit?usp=sharing"></a>
+                    href="https://docs.google.com/presentation/d/16Z1AVyG7g4X0bvB_Byk893kkDECzFC-pytHkhHk0kEU/edit?usp=sharing"></a>
                 <div class="work-cards-main"
                     style="background-image: url('imgs/works/marketing/works-reutilizar.jpg');">
                     <div class="work-cards-content">
@@ -367,8 +381,7 @@
 
 
             <div class="work-cards animate__animated" data-category="marketing">
-                <a target="_blank"
-                href="https://www.behance.net/gallery/207870403/Enchastre-Comercializacion"></a>
+                <a target="_blank" href="https://www.behance.net/gallery/207870403/Enchastre-Comercializacion"></a>
                 <div class="work-cards-main" style="background-image: url('imgs/works/marketing/works-enchastre.jpg');">
                     <div class="work-cards-content">
                         <p>Trabajo final para materia de "Comercialización II" en la Universidad de Palermo.</p>
@@ -421,7 +434,7 @@
                     </div>
 
                 </div>
-           
+
 
                 <div class="container-form">
 
@@ -496,11 +509,9 @@
 
 
 
-
-
-
-
     <script src="js/main.js"></script>
+    <script src="js/responsiveNavBar.js"></script>
+    <script src="js/smoothScroll.js"></script>
     <script src="js/work-cards.js"></script>
     <script src="js/envioFormulario.js"></script>
     <script src="js/languageSwap.js"></script>

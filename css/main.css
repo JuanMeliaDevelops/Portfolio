@@ -18,8 +18,7 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-
-/* Loader  */ 
+/* Loader  */
 #loader {
   width: 100%;
   height: 100%;
@@ -35,7 +34,7 @@ body {
   backdrop-filter: brightness(0.4);
 }
 
-/* From Uiverse.io by AbanoubMagdy1 */ 
+/* From Uiverse.io by AbanoubMagdy1 */
 .loader {
   --dim: 3rem;
   width: var(--dim);
@@ -43,7 +42,7 @@ body {
   position: relative;
   animation: spin988 2s linear infinite;
   margin-top: 25%;
-  margin-left: 48.5%;
+  margin-left: 49%;
 }
 
 .loader .circle {
@@ -81,31 +80,34 @@ body {
     transform: scale(1) rotate(0);
   }
 
-  20%, 25% {
+  20%,
+  25% {
     transform: scale(1.3) rotate(90deg);
   }
 
-  45%, 50% {
+  45%,
+  50% {
     transform: scale(1) rotate(180deg);
   }
 
-  70%, 75% {
+  70%,
+  75% {
     transform: scale(1.3) rotate(270deg);
   }
 
-  95%, 100% {
+  95%,
+  100% {
     transform: scale(1) rotate(360deg);
   }
 }
 
-/* From Uiverse.io by AbanoubMagdy1 end*/ 
+/* From Uiverse.io by AbanoubMagdy1 end*/
 
-.loaderBodyHide{
+.loaderBodyHide {
   overflow: hidden; /* Desactiva el desplazamiento */
 }
 
 /* Section Home */
-
 
 #home {
   color: whitesmoke;
@@ -118,14 +120,24 @@ body {
   padding: 0;
 }
 
+/* NAVBAR */
+
 .navBar {
   width: 100%;
-  height: 15vh;
+  height: 15%;
   padding-top: 2%;
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
+.nav-sides {
+  font-size: larger;
+  margin-left: 4%;
+  margin-right: 4%;
+  width: 10%;
+}
+
 
 .home-nav {
   padding: 0;
@@ -146,12 +158,61 @@ body {
   transition: opacity 0.8s ease;
 }
 
-.nav-sides {
-  font-size: larger;
-  margin-left: 4%;
-  margin-right: 4%;
-  width: 10%;
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
 }
+
+.hamburger .line {
+  height: 3px;
+  background-color: whitesmoke;
+  margin-bottom: 5px;
+  border-radius: 200px;
+}
+
+/* Mobile nav (hidden by default) */
+.mobile-nav {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  background-color: #262320;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  border-radius: 0 0 20px 20px;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-nav ul li {
+  padding: 1rem;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Mobile nav active state */
+.mobile-nav.active {
+  height: 38vh; /* Desplegar todo el menú */
+  transition: height 0.5s ease;
+}
+
+
+/* NAVBAR end */
+
 
 .contactameButton {
   font-weight: 700;
@@ -193,7 +254,7 @@ body {
   margin: 0 auto;
   text-align: center;
   padding-bottom: 20px;
-  width: 20vw;
+  width: 35vw;
   height: 10vh;
 }
 
@@ -412,7 +473,6 @@ body {
     border 0.8s ease;
 }
 
-
 /* Section Contacto */
 
 #contact {
@@ -554,7 +614,6 @@ textarea {
   background-color: black;
   border: 2px solid black;
   border-radius: 20px;
-
 }
 
 #contact form button:hover {
@@ -728,33 +787,64 @@ footer {
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
-
-
 }
 
 /* Mobile */
 @media screen and (max-width: 767px) {
 
+  .loader{
+    margin-top: 80%;
+    margin-left: 45%;
+  }
+  
   /* Home */
 
+/* NAVBAR */
+.home-nav, .contactameButton, .nav-sides {
+  display: none;
+}
+
+.navBar{
+  height: 10%;
+  justify-content: end !important;
+}
+
+.hamburger {
+  display: flex;
+  margin-right: 20px;
+}
+
+/* For languages */
+.languages {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.languages p{
+  margin: 0;
+}
+
+
+/* NAVBAR end */
+
   #home-maincontainer {
+    
     flex-direction: column-reverse;
     height: auto;
-    
+
   }
 
-  .home-info{
+  .home-info {
     margin-top: 10vh;
   }
 
-  #home-maincontainer h2{
+  #home-maincontainer h2 {
     padding: 4% 0;
     text-align: left !important;
-
   }
 
-  .avatar{
+  .avatar {
     display: none;
     width: 150px;
     height: auto;
@@ -775,25 +865,27 @@ footer {
 
   /* sobre mi */
 
-#sobremi{
-  height: auto;
-}  .home-info{
+  #sobremi {
+   
+    height: auto;
+  }
+  .home-info {
     padding: 0;
   }
 
-  .sobreMi-bio{
-    margin-top: 0vh;
+  .sobreMi-bio {
+    margin-top: -5vh;
   }
-  .sobreMi-cats a button{
-  width: 50vw;
+  .sobreMi-cats a button {
+    width: 50vw;
   }
 
-  .sobreMi-cats-container{
+  .sobreMi-cats-container {
     height: auto;
     padding-top: 12%;
   }
 
-  .sobreMi-cats-container a{
+  .sobreMi-cats-container a {
     height: auto;
     padding: 4% 0;
   }
@@ -824,12 +916,8 @@ footer {
     height: 30vh;
   }
 
-  .work-cards-content p {
+  .work-cards-content {
     display: none;
-  }
-
-  .work-cards-content button {
-   display: none;
   }
 
   /* Ocultar botones y hacer clicable toda la tarjeta en mobile */
@@ -852,106 +940,101 @@ footer {
     transition: none;
   }
 
+  /* Contact */
 
-/* Contact */
+  #contact {
+    height: auto; /* Ajustar la altura a 'auto' para que el contenido fluya según su tamaño */
+    padding: 5% 0; /* Añadir padding para dar espacio a los elementos */
+  }
 
-#contact {
-  height: auto; /* Ajustar la altura a 'auto' para que el contenido fluya según su tamaño */
-  padding: 5% 0; /* Añadir padding para dar espacio a los elementos */
-}
+  #contact h4 {
+    padding: 8% 0; /* Reducir el padding en móviles */
+    font-size: 1.8rem; /* Ajustar el tamaño de fuente del título */
+  }
 
-#contact h4 {
-  padding: 8% 0; /* Reducir el padding en móviles */
-  font-size: 1.8rem; /* Ajustar el tamaño de fuente del título */
-}
+  .container-contact {
+    height: auto; /* Cambiar la altura a 'auto' para que se ajuste al contenido */
+    width: 100%; /* Asegurar que la sección ocupe todo el ancho disponible */
+    display: flex;
+    flex-direction: column; /* Alinear el contenido en columna para móviles */
+    align-items: center; /* Centrar el contenido */
+  }
 
-.container-contact {
-  height: auto; /* Cambiar la altura a 'auto' para que se ajuste al contenido */
-  width: 100%; /* Asegurar que la sección ocupe todo el ancho disponible */
-  display: flex;
-  flex-direction: column; /* Alinear el contenido en columna para móviles */
-  align-items: center; /* Centrar el contenido */
-}
+  .containerContact-background {
+    height: auto; /* De nuevo, ajustar la altura para que dependa del contenido */
+    width: 100%; /* Asegurar que la sección ocupe todo el ancho */
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+    align-items: center;
+    padding: 5%; /* Espacio alrededor */
+  }
 
-.containerContact-background {
-  height: auto; /* De nuevo, ajustar la altura para que dependa del contenido */
-  width: 100%; /* Asegurar que la sección ocupe todo el ancho */
-  display: flex;
-  flex-direction: column; /* Alinear elementos en columna */
-  align-items: center;
-  padding: 5% ; /* Espacio alrededor */
-}
+  .container-datos {
+    height: auto; /* Ajuste dinámico según el contenido */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    margin-bottom: 5%; /* Añadir un margen inferior para separar del formulario */
+    display: flex;
+    flex-direction: column; /* Alinear en columna */
+    align-items: center; /* Centrar contenido */
+    text-align: center; /* Centrar texto */
+  }
 
-.container-datos {
-  height: auto; /* Ajuste dinámico según el contenido */
-  width: 100%; /* Asegurar que ocupe todo el ancho */
-  margin-bottom: 5%; /* Añadir un margen inferior para separar del formulario */
-  display: flex;
-  flex-direction: column; /* Alinear en columna */
-  align-items: center; /* Centrar contenido */
-  text-align: center; /* Centrar texto */
-}
+  .container-form {
+    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    padding: 5%; /* Añadir un padding general */
+    display: flex;
+    flex-direction: column; /* Formularios en columna */
+    align-items: center; /* Centrar los elementos del formulario */
+  }
 
-.container-form {
-  width: 100%; /* Asegurar que ocupe todo el ancho disponible */
-  padding: 5%; /* Añadir un padding general */
-  display: flex;
-  flex-direction: column; /* Formularios en columna */
-  align-items: center; /* Centrar los elementos del formulario */
-}
+  #contact form button {
+    width: 40vw;
+    height: 10vw;
+  }
 
-#contact form button{
-  width: 40vw;
-  height: 10vw;
-}
+  #msgSubmit {
+    font-size: 1rem;
+  }
 
-#msgSubmit{
-  font-size: 1rem;
-}
+  /* FOOTER */
 
-/* FOOTER */
+  .footer-container {
+    margin: 25% auto 0 auto;
+    padding-top: 10%;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    height: 50vh;
+    justify-content: center;
+  }
 
-.footer-container {
-  margin: 25% auto 0 auto;
-  padding-top: 10% ;
-  flex-direction: column;
-  text-align: center;
-  width: 80%;
-  height: 50vh;
-  justify-content: center;
-}
+  .footer-label,
+  .footer-socials,
+  .footer-links {
+    width: 100%; /* Apilar verticalmente los elementos */
+    margin-bottom: 2%;
+  }
 
-.footer-label, 
-.footer-socials, 
-.footer-links {
-  width: 100%; /* Apilar verticalmente los elementos */
-  margin-bottom: 2%;
-}
+  .footer-socials img {
+    width: 40%; /* Ajustar el tamaño de los íconos */
+  }
 
-.footer-socials img {
-  width: 40%; /* Ajustar el tamaño de los íconos */
-}
+  .footer-socials img {
+    padding: 2%;
+    width: 60%;
+  }
 
+  .footer-links {
+    padding: 10% 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    justify-content: start;
+    text-align: center;
+  }
 
-.footer-socials img {
-padding: 2%;
-width: 60%;
-}
+  .footer-links ul {
+    padding: 0;
+  }
 
-.footer-links {
-padding: 10% 0 !important;
-margin: 0 !important;
-width: 100%;
-justify-content: start;
-text-align: center;
-}
-
-.footer-links ul{
-  padding: 0;
-
-}
-
-/* Footer END */
-
-
+  /* Footer END */
 }

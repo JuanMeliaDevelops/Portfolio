@@ -88,56 +88,78 @@
 
             <a href="index.html#contact" class="nav-sides contactameButton p-4 smooth-scroll"
                 data-lang-en="Contact me">Contactame</a>
-
+        
             <ul class="home-nav">
-                <li><a href="index.html" data-lang-en="Home">Inicio</a> </li>
-                <li><a href="sobreMi.html" data-lang-en="About me">Sobre Mí</a> </li>
-                <li><a class="cv" href="cv\JuanMelia-CV-es.pdf" target="_blank" data-lang-en="Resume">Resumen</a></li>
+                <li><a href="index.html" data-lang-en="Home">Inicio</a></li>
+                <li><a href="sobreMi.html" data-lang-en="About me">Sobre Mí</a></li>
+                <li><a class="cv" href="cv/JuanMelia-CV-es.pdf" target="_blank" data-lang-en="Resume">Resumen</a></li>
             </ul>
-
+        
             <div class="nav-sides p-4 items-center">
-                <ul class="languages d-flex ">
+                <ul class="languages d-flex">
                     <li class="language" onclick="setLanguage('es')">ES</li>
                     <p>/</p>
                     <li class="language" onclick="setLanguage('en')">EN</li>
                 </ul>
-
             </div>
-
+        
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        
+            <div id="mobileNav" class="mobile-nav">
+                <ul>
+                    <li><a href="index.html" data-lang-en="Home">Inicio</a></li>
+                    <li><a href="sobreMi.html" data-lang-en="About me">Sobre Mí</a></li>
+                    <li><a href="cv/JuanMelia-CV-es.pdf" target="_blank" data-lang-en="Resume">Resumen</a></li>
+                    <li><a href="index.html#contact" data-lang-en="Contact me">Contactame</a></li>
+                </ul>
+        
+                <div class="languages">
+                    <ul class="languages d-flex">
+                        <li class="language" onclick="setLanguage('es')">ES</li>
+                        <p>/</p>
+                        <li class="language" onclick="setLanguage('en')">EN</li>
+                    </ul>
+                </div>
+            </div>
+        
         </nav>
 
         <div id="home-mainContainer">
 
             <div class="sobreMi-cats">
-        
+
                 <div class="avatar">
                     <img src="imgs/avatar.webp" alt="Juan Melia - Desarrollador y Diseñador Portfolio Imagen de perfil">
                 </div>
-        
+
                 <!-- Cada botón debe tener su propio enlace -->
-                <a href="#content" >
+                <a href="#content" class="smooth-scroll">
                     <button data-category="visuals" data-lang-en="Visual Art">Arte Visual</button>
                 </a>
-                <a href="#content" >
+                <a href="#content" class="smooth-scroll">
                     <button data-category="music" data-lang-en="Music">Música</button>
                 </a>
-                <a href="#content" >
+                <a href="#content" class="smooth-scroll">
                     <button data-category="otros" data-lang-en="Other">Otros</button>
                 </a>
-        
+
             </div>
-        
+
             <div class="home-info">
-        
+
                 <div class="sobreMi-bio">
-        
+
                     <h1 class="text-justify" data-lang-en="Hello! My name is Juan Melia.">
                         ¡Hola! Mi nombre es Juan Melia.
                     </h1>
                     <br>
-        
+
                     <div class="bio-text" data-lang-en="
-                        <p>I am a <b>“Product Design”</b> student at Universidad de Palermo.
+                        <p>I am a <b>“Product Designer”</b> student at Universidad de Palermo.
                         I currently work as a <b>Freelancer</b> in web design and development for clients.</p>
                         <br>
                         <p><b>Who am I?</b><br> Passionate about technology and the digital world, in each of my projects I strive to reflect my creativity, originality, and the pursuit of perfection.</p>
@@ -146,32 +168,35 @@
                         <p>Some of my hobbies include Sports, Music, Video Games, Art, and nature. I share a bit of these to help you get to know me better.</p>
                     ">
                         <p>Soy estudiante de <b>“Diseño de Productos”</b> en la Universidad de Palermo.
-                            Actualmente trabajo como <b>Freelancer</b> en el diseño y desarrollo de sitios web para clientes.
+                            Actualmente trabajo como <b>Freelancer</b> en el diseño y desarrollo de sitios web para
+                            clientes.
                         </p>
                         <br>
                         <p>
                             <b>¿Quién soy?</b>
                             <br>
-                            Apasionado por la tecnología y el mundo digital, en cada uno de mis trabajos trato de reflejar mi
+                            Apasionado por la tecnología y el mundo digital, en cada uno de mis trabajos trato de
+                            reflejar mi
                             creatividad, originalidad y la búsqueda de la perfección.
                         </p>
                         <br>
-        
+
                         <p>Una persona curiosa, que le gusta aprender.</p>
-        
+
                         <p>
-                            Algunos de mis hobbies son los Deportes, la Música, los Videojuegos, el Arte y la naturaleza.
+                            Algunos de mis hobbies son los Deportes, la Música, los Videojuegos, el Arte y la
+                            naturaleza.
                             Dejo algo de ellos para que me conozcan mejor.
                         </p>
-        
+
                     </div>
-        
+
                 </div>
-        
+
             </div>
-        
+
         </div>
-        
+
     </section>
 
     <section id="content" class="sobreMi-cats-container">
@@ -240,7 +265,7 @@
         <!-- Music -->
         <a class="sobreMi-cats-content animate__animated" data-lightbox="music" data-category="music"
             href="imgs/sobreMi/Visual/3cc781f1-9c0c-485c-b53a-2de312a351ec.jpg">
-            <iframe  style="border-radius:12px;"
+            <iframe style="border-radius:12px;"
                 src="https://open.spotify.com/embed/playlist/0kKeMlyuh01eiX8jGENWr6?utm_source=generator&theme=0"
                 width="100%" height="352" frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -322,7 +347,8 @@
 
     </footer>
 
-
+    <script src="js/smoothScroll.js"></script>
+    <script src="js/responsiveNavBar.js"></script>
     <script src="js/cats-content.js"></script>
     <script src="js/lightbox-plus-jquery.js"></script>
     <script src="js/languageSwap.js"></script>
