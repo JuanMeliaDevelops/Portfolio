@@ -208,7 +208,7 @@ body {
 
 .avatar {
   width: 300px;
-  height: 42vh;
+  height: 40vh;
 }
 
 .avatar img {
@@ -651,6 +651,7 @@ footer {
 }
 
 .sobreMi-cats {
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -738,10 +739,22 @@ footer {
   /* Home */
 
   #home-maincontainer {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    height: auto;
+    
   }
 
-  .avatar {
+  .home-info{
+    margin-top: 10vh;
+  }
+
+  #home-maincontainer h2{
+    padding: 4% 0;
+    text-align: left !important;
+
+  }
+
+  .avatar{
     display: none;
     width: 150px;
     height: auto;
@@ -760,6 +773,30 @@ footer {
     width: 35vw;
   }
 
+  /* sobre mi */
+
+#sobremi{
+  height: auto;
+}  .home-info{
+    padding: 0;
+  }
+
+  .sobreMi-bio{
+    margin-top: 0vh;
+  }
+  .sobreMi-cats a button{
+  width: 50vw;
+  }
+
+  .sobreMi-cats-container{
+    height: auto;
+    padding-top: 12%;
+  }
+
+  .sobreMi-cats-container a{
+    height: auto;
+    padding: 4% 0;
+  }
   /* Work */
 
   #work ul {
@@ -817,26 +854,52 @@ footer {
 
 
 /* Contact */
-#contact h4{
-  padding: 10% 0;
-}
-.container-contact{
-  height: auto;
-}
-.containerContact-background{
-  height: 50vh;
-  flex-direction: column;
+
+#contact {
+  height: auto; /* Ajustar la altura a 'auto' para que el contenido fluya según su tamaño */
+  padding: 5% 0; /* Añadir padding para dar espacio a los elementos */
 }
 
-.container-datos{
-  height: 40vh;
-  width: 90%;
+#contact h4 {
+  padding: 8% 0; /* Reducir el padding en móviles */
+  font-size: 1.8rem; /* Ajustar el tamaño de fuente del título */
 }
 
-.container-form{
-  margin-top: 12%;
-  width: 80%;
+.container-contact {
+  height: auto; /* Cambiar la altura a 'auto' para que se ajuste al contenido */
+  width: 100%; /* Asegurar que la sección ocupe todo el ancho disponible */
+  display: flex;
+  flex-direction: column; /* Alinear el contenido en columna para móviles */
+  align-items: center; /* Centrar el contenido */
 }
+
+.containerContact-background {
+  height: auto; /* De nuevo, ajustar la altura para que dependa del contenido */
+  width: 100%; /* Asegurar que la sección ocupe todo el ancho */
+  display: flex;
+  flex-direction: column; /* Alinear elementos en columna */
+  align-items: center;
+  padding: 5% ; /* Espacio alrededor */
+}
+
+.container-datos {
+  height: auto; /* Ajuste dinámico según el contenido */
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+  margin-bottom: 5%; /* Añadir un margen inferior para separar del formulario */
+  display: flex;
+  flex-direction: column; /* Alinear en columna */
+  align-items: center; /* Centrar contenido */
+  text-align: center; /* Centrar texto */
+}
+
+.container-form {
+  width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+  padding: 5%; /* Añadir un padding general */
+  display: flex;
+  flex-direction: column; /* Formularios en columna */
+  align-items: center; /* Centrar los elementos del formulario */
+}
+
 #contact form button{
   width: 40vw;
   height: 10vw;
