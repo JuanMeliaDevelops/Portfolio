@@ -216,13 +216,10 @@ body {
 
 .contactameButton {
   font-weight: 700;
+
+
 }
 
-.contactameButton:hover {
-  cursor: pointer;
-  opacity: 0.4;
-  transition: opacity 0.8s ease;
-}
 
 .languages {
   cursor: pointer;
@@ -268,8 +265,8 @@ body {
 }
 
 .avatar {
-  width: 300px;
-  height: 40vh;
+  width: 320px;
+  height: 400px;
 }
 
 .avatar img {
@@ -279,7 +276,9 @@ body {
 }
 
 .home-info {
-  width: 30%;
+
+width: 25vw;
+
 }
 
 .home-info h1 {
@@ -289,6 +288,7 @@ body {
 }
 
 .home-info h2 {
+
   font-weight: 400;
   font-size: 1.5rem;
 }
@@ -316,20 +316,12 @@ body {
   border-radius: 20px;
 }
 
-.home-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: background-color 0.8s ease;
+.hoverAll:hover {
+  transition: transform 0.3s ease, opacity 0.8s ease;
+  opacity: 0.4;
+  transform: translateY(-5px); /* Sube 5px hacia arriba */
 }
 
-.home-btn:hover img {
-  transform: scale(1.2);
-  transition: transform 0.8s ease;
-}
-
-.home-btn:hover p {
-  transform: scale(0.9);
-  transition: transform 0.8s ease;
-}
 
 /* Section Trabajos */
 
@@ -368,9 +360,10 @@ body {
 
 #work ul li:hover {
   opacity: 0.4; /* Cambié a 0.8 para que sea más visible en hover */
-  transform: translateY(-3px); /* Efecto de desplazamiento */
+  transform: translateY(-5px); /* Efecto de desplazamiento */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más intensa en hover */
-  transition: opacity 0.8s ease;
+  transition: transform 0.3s ease, opacity 0.8s ease;
+
 }
 
 #work ul li:focus {
@@ -943,7 +936,7 @@ footer {
   /* Contact */
 
   #contact {
-    height: auto; /* Ajustar la altura a 'auto' para que el contenido fluya según su tamaño */
+    height: auto; /* Ajustar la altura a 'auto' para quea el contenido fluya según su tamaño */
     padding: 5% 0; /* Añadir padding para dar espacio a los elementos */
   }
 
@@ -964,7 +957,7 @@ footer {
     height: auto; /* De nuevo, ajustar la altura para que dependa del contenido */
     width: 100%; /* Asegurar que la sección ocupe todo el ancho */
     display: flex;
-    flex-direction: column; /* Alinear elementos en columna */
+    flex-direction: column-reverse; /* Alinear elementos en columna */
     align-items: center;
     padding: 5%; /* Espacio alrededor */
   }

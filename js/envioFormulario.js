@@ -1,7 +1,7 @@
 $('#submit').click(enviarForm);
 
 // Funciona al apretar ENTER
-$('.container-form input, .container-form textarea').keypress(function(event) {
+$('.container-form input, .container-form textarea').keypress(function (event) {
     if (event.which === 13) {
         event.preventDefault();
         enviarForm();
@@ -46,30 +46,31 @@ function enviarForm() {
     // Seleccionar los mensajes de validación según el idioma
     const messages = validationMessages[currentLanguage];
 
+    // Validaciones
     if (!validacionCorreo.test(email)) {
         $('#email').val('');
-        $('#email').attr('placeholder', messages.email);  // Cambiar placeholder basado en idioma
+        $('#email').attr('placeholder', messages.email);
         $('#email').addClass('custom-placeholder');
         validado = 0;
     }
 
     if (name.length <= 5) {
         $('#name').val('');
-        $('#name').attr('placeholder', messages.name);  // Cambiar placeholder basado en idioma
+        $('#name').attr('placeholder', messages.name);
         $('#name').addClass('custom-placeholder');
         validado = 0;
     }
 
     if (subject.length <= 4) {
         $('#msg_subject').val('');
-        $('#msg_subject').attr('placeholder', messages.subject);  // Cambiar placeholder basado en idioma
+        $('#msg_subject').attr('placeholder', messages.subject);
         $('#msg_subject').addClass('custom-placeholder');
         validado = 0;
     }
 
     if (message.length <= 20) {
         $('#message').val('');
-        $('#message').attr('placeholder', messages.message);  // Cambiar placeholder basado en idioma
+        $('#message').attr('placeholder', messages.message);
         $('#message').addClass('custom-placeholder');
         validado = 0;
     }
@@ -85,14 +86,44 @@ function enviarForm() {
 
             success: function (res) {
                 if (parseInt(res) == 1) {
-                    $('#msgSubmit').text(messages.success);  // Mensaje de éxito basado en idioma
+                    $('#msgSubmit').text(messages.success);
+
+                    // Resetear formulario
+                    resetFormPlaceholders(currentLanguage);
+
+                    // Quitar estilos de error
+                    $('.custom-placeholder').removeClass('custom-placeholder');
                 } else {
-                    $('#msgSubmit').css('color', 'red').text(messages.error);  // Mensaje de error basado en idioma
+                    $('#msgSubmit').css('color', 'red').text(messages.error);
                 }
             },
-            error: function (res) {
-                $('#msgSubmit').css('color', 'red').text(messages.error);  // Mensaje de error basado en idioma
+
+            error: function () {
+                $('#msgSubmit').css('color', 'red').text(messages.error);
             }
         });
     }
+}
+
+// Función para resetear placeholders basados en idioma
+function resetFormPlaceholders(language) {
+    $('#form')[0].reset(); // Reinicia los valores del formulario
+
+    // Actualiza los placeholders según el idioma
+    $('#name').attr(
+        'placeholder',
+        language === 'en' ? $('#name').data('lang-en') : 'Nombre \\ Empresa'
+    );
+    $('#email').attr(
+        'placeholder',
+        language === 'en' ? $('#email').data('lang-en') : 'Email'
+    );
+    $('#msg_subject').attr(
+        'placeholder',
+        language === 'en' ? $('#msg_subject').data('lang-en') : 'Asunto'
+    );
+    $('#message').attr(
+        'placeholder',
+        language === 'en' ? $('#message').data('lang-en') : 'Mensaje'
+    );
 }

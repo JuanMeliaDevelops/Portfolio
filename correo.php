@@ -7,7 +7,7 @@ if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["subject"]) 
     $email = $_POST["email"];
     $subject = $_POST["subject"];
     $message = $_POST["message"];
-    $contenido = "Formulario de contacto de Solariega," . "\r\n" . $name . " esta interesado/a." . "\r\n" . "Email: " . $email . "\r\n" . "Asunto: " . $subject . "\r\n" . $message;
+    $contenido = "Formulario de contacto de Portfolio," . "\r\n" . $name . " esta interesado/a." . "\r\n" . "Email: " . $email . "\r\n" . "Asunto: " . $subject . "\r\n" . $message;
     $destino = "juanimeliausa@gmail.com";
     $asunto = "Portfolio!!,  " . $name . " " . $subject;
     $header = "From: " . $email . "\r\n" . "reply: " . $email . "\r\n" . "X-Mailer: PHP/" . phpVersion();
